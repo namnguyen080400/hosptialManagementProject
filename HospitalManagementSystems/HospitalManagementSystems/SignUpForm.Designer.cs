@@ -63,6 +63,8 @@
             this.textBoxGender = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.buttonClear = new System.Windows.Forms.Button();
+            this.buttonExit = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -71,7 +73,7 @@
             // 
             this.buttonSignUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.buttonSignUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSignUp.Location = new System.Drawing.Point(369, 871);
+            this.buttonSignUp.Location = new System.Drawing.Point(236, 866);
             this.buttonSignUp.Name = "buttonSignUp";
             this.buttonSignUp.Size = new System.Drawing.Size(108, 29);
             this.buttonSignUp.TabIndex = 13;
@@ -398,12 +400,38 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Contact";
             // 
+            // buttonClear
+            // 
+            this.buttonClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.buttonClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonClear.Location = new System.Drawing.Point(369, 866);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(108, 29);
+            this.buttonClear.TabIndex = 34;
+            this.buttonClear.Text = "Clear";
+            this.buttonClear.UseVisualStyleBackColor = false;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
+            // 
+            // buttonExit
+            // 
+            this.buttonExit.BackColor = System.Drawing.Color.Red;
+            this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExit.Location = new System.Drawing.Point(502, 866);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(108, 29);
+            this.buttonExit.TabIndex = 35;
+            this.buttonExit.Text = "Exit";
+            this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            // 
             // SignUpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(800, 921);
+            this.Controls.Add(this.buttonExit);
+            this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.textBoxGender);
             this.Controls.Add(this.label17);
@@ -470,5 +498,7 @@
         private System.Windows.Forms.TextBox textBoxGender;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button buttonClear;
+        private System.Windows.Forms.Button buttonExit;
     }
 }

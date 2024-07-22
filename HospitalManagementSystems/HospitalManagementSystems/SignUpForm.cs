@@ -175,5 +175,28 @@ namespace HospitalManagementSystems
             }
             return result;
         }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            textBoxFirstName.Clear();
+            textBoxLastName.Clear();
+            textBoxUsername.Clear();
+            textBoxPassword.Clear();
+            textBoxDOB.Clear();
+            textBoxGender.Clear();
+            textBoxEmail.Clear();
+            textBoxHomePhone.Clear();
+            textBoxMobilePhone.Clear();
+            textBoxAddressNumber.Clear();
+            textBoxStreet.Clear();
+            textBoxCity.Clear();
+            textBoxState.Clear();
+            textBoxZipCode.Clear();
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
