@@ -32,6 +32,7 @@
             this.buttonScheduleAppointment = new System.Windows.Forms.Button();
             this.buttonMedications = new System.Windows.Forms.Button();
             this.buttonMessage = new System.Windows.Forms.Button();
+            this.buttonLogout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -46,33 +47,48 @@
             // 
             // buttonScheduleAppointment
             // 
+            this.buttonScheduleAppointment.BackColor = System.Drawing.Color.SandyBrown;
             this.buttonScheduleAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonScheduleAppointment.Location = new System.Drawing.Point(274, 224);
+            this.buttonScheduleAppointment.Location = new System.Drawing.Point(131, 224);
             this.buttonScheduleAppointment.Name = "buttonScheduleAppointment";
             this.buttonScheduleAppointment.Size = new System.Drawing.Size(125, 50);
             this.buttonScheduleAppointment.TabIndex = 1;
             this.buttonScheduleAppointment.Text = "Schedule an appointment";
-            this.buttonScheduleAppointment.UseVisualStyleBackColor = true;
+            this.buttonScheduleAppointment.UseVisualStyleBackColor = false;
             // 
             // buttonMedications
             // 
+            this.buttonMedications.BackColor = System.Drawing.Color.Turquoise;
             this.buttonMedications.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonMedications.Location = new System.Drawing.Point(416, 224);
+            this.buttonMedications.Location = new System.Drawing.Point(273, 224);
             this.buttonMedications.Name = "buttonMedications";
             this.buttonMedications.Size = new System.Drawing.Size(110, 50);
             this.buttonMedications.TabIndex = 2;
             this.buttonMedications.Text = "Medications";
-            this.buttonMedications.UseVisualStyleBackColor = true;
+            this.buttonMedications.UseVisualStyleBackColor = false;
             // 
             // buttonMessage
             // 
+            this.buttonMessage.BackColor = System.Drawing.Color.DarkKhaki;
             this.buttonMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonMessage.Location = new System.Drawing.Point(541, 224);
+            this.buttonMessage.Location = new System.Drawing.Point(398, 224);
             this.buttonMessage.Name = "buttonMessage";
             this.buttonMessage.Size = new System.Drawing.Size(98, 50);
             this.buttonMessage.TabIndex = 3;
             this.buttonMessage.Text = "Message";
-            this.buttonMessage.UseVisualStyleBackColor = true;
+            this.buttonMessage.UseVisualStyleBackColor = false;
+            // 
+            // buttonLogout
+            // 
+            this.buttonLogout.BackColor = System.Drawing.Color.Red;
+            this.buttonLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLogout.Location = new System.Drawing.Point(661, 224);
+            this.buttonLogout.Name = "buttonLogout";
+            this.buttonLogout.Size = new System.Drawing.Size(98, 50);
+            this.buttonLogout.TabIndex = 4;
+            this.buttonLogout.Text = "Logout";
+            this.buttonLogout.UseVisualStyleBackColor = false;
+            this.buttonLogout.Click += new System.EventHandler(this.buttonLogout_Click);
             // 
             // PatientHomepageForm
             // 
@@ -80,6 +96,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumAquamarine;
             this.ClientSize = new System.Drawing.Size(973, 581);
+            this.Controls.Add(this.buttonLogout);
             this.Controls.Add(this.buttonMessage);
             this.Controls.Add(this.buttonMedications);
             this.Controls.Add(this.buttonScheduleAppointment);
@@ -97,5 +114,6 @@
         private System.Windows.Forms.Button buttonScheduleAppointment;
         private System.Windows.Forms.Button buttonMedications;
         private System.Windows.Forms.Button buttonMessage;
+        private System.Windows.Forms.Button buttonLogout;
     }
 }

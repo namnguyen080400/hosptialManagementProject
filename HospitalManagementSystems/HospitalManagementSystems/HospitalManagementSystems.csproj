@@ -52,10 +52,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HospitalData.dbml</DependentUpon>
     </Compile>
+    <Compile Include="HospitalManagementHomepageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HospitalManagementHomepageForm.Designer.cs">
+      <DependentUpon>HospitalManagementHomepageForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="HospitalManagementsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>HospitalManagementsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HosptialMainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HosptialMainPage.Designer.cs">
+      <DependentUpon>HosptialMainPage.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -77,6 +89,12 @@
     <Compile Include="SignUpForm.Designer.cs">
       <DependentUpon>SignUpForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="HospitalManagementHomepageForm.resx">
+      <DependentUpon>HospitalManagementHomepageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HosptialMainPage.resx">
+      <DependentUpon>HosptialMainPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>

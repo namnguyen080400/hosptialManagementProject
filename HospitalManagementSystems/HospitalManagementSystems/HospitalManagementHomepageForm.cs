@@ -10,20 +10,18 @@ using System.Windows.Forms;
 
 namespace HospitalManagementSystems
 {
-    public partial class PatientHomepageForm : Form
+    public partial class HospitalManagementHomepageForm : Form
     {
-        int loginId;
-        public PatientHomepageForm(int loginId)
+        public HospitalManagementHomepageForm()
         {
             InitializeComponent();
-            this.loginId = loginId;
         }
 
-        private void buttonLogout_Click(object sender, EventArgs e)
+        private void buttonPatientHomePage_Click(object sender, EventArgs e)
         {
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
-            this.Close();
+            this.Hide();
         }
     }
 }
