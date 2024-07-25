@@ -65,6 +65,8 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.buttonClear = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.comboBoxExpertise = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -424,12 +426,34 @@
             this.buttonExit.UseVisualStyleBackColor = false;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(447, 813);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(81, 20);
+            this.label18.TabIndex = 36;
+            this.label18.Text = "*Expertise";
+            // 
+            // comboBoxExpertise
+            // 
+            this.comboBoxExpertise.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxExpertise.FormattingEnabled = true;
+            this.comboBoxExpertise.Location = new System.Drawing.Point(544, 810);
+            this.comboBoxExpertise.Name = "comboBoxExpertise";
+            this.comboBoxExpertise.Size = new System.Drawing.Size(162, 28);
+            this.comboBoxExpertise.TabIndex = 37;
+            this.comboBoxExpertise.SelectedIndexChanged += new System.EventHandler(this.comboBoxExpertise_SelectedIndexChanged);
+            // 
             // SignUpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(800, 921);
+            this.Controls.Add(this.comboBoxExpertise);
+            this.Controls.Add(this.label18);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.groupBox2);
@@ -500,5 +524,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.ComboBox comboBoxExpertise;
     }
 }

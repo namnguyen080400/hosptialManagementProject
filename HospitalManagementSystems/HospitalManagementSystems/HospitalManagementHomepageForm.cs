@@ -17,7 +17,7 @@ namespace HospitalManagementSystems
             InitializeComponent();
         }
 
-        private void buttonPatientHomePage_Click(object sender, EventArgs e)
+        private void buttonPatientLoginPage_Click(object sender, EventArgs e)
         {
             LoginForm loginForm = new LoginForm();
             loginForm.Show();

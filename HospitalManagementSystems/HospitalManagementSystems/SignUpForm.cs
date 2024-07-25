@@ -85,13 +85,24 @@ namespace HospitalManagementSystems
                         FirstName = firstName,
                         LastName = lastName,
                         DateOfBirth = DateTime.Parse(dob),
-                        Gender = gender,
+                        Gender = gender
+                    };
+                    hospitalContext.Peoples.InsertOnSubmit(newPeople);
+                    hospitalContext.SubmitChanges();
+
+                    ContactInfo newContact = new ContactInfo
+                    {
+                        AddressId = newAddress.AddressId,
                         HomePhone = homePhone,
                         MobilePhone = mobilePhone,
                         Email = email
                     };
-                    hospitalContext.Peoples.InsertOnSubmit(newPeople);
-                    hospitalContext.SubmitChanges();
+
+                    Doctor newDoctor = new Doctor
+                    {
+                        UserId = newPeople.UserId,
+                        
+                    };
 
                     MessageBox.Show("Sign up sucessful");
                 }
@@ -197,6 +208,17 @@ namespace HospitalManagementSystems
         private void buttonExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void comboBoxExpertise_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxUserType.SelectedIndex == 2)
+            {
+                string[] expertiseType = { "Select expertise","Primary care physician", "Allergists", "Anesthesiologists", "Cardiologists",
+                                        "Colon and Rectal Surgeons", "Dermatologists", "Endocrinologists", "Gastroenterologists"};
+                comboBoxExpertise.DataSource = expertiseType;
+                comboBoxExpertise.SelectedIndex = 0;
+            }
         }
     }
 }
