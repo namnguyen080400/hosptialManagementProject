@@ -97,13 +97,19 @@ namespace HospitalManagementSystems
                         MobilePhone = mobilePhone,
                         Email = email
                     };
+                    hospitalContext.ContactInfos.InsertOnSubmit(newContact);
+                    hospitalContext.SubmitChanges();
 
-                    Doctor newDoctor = new Doctor
+                    if (comboBoxExpertise.SelectedIndex == 2)
                     {
-                        UserId = newPeople.UserId,
-                        
-                    };
-
+                        Doctor newDoctor = new Doctor
+                        {
+                            UserId = newPeople.UserId,
+                            Expertise = comboBoxExpertise.SelectedValue.ToString()
+                        };
+                        hospitalContext.Doctors.InsertOnSubmit(newDoctor);
+                        hospitalContext.SubmitChanges();
+                    }
                     MessageBox.Show("Sign up sucessful");
                 }
             }

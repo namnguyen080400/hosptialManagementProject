@@ -16,5 +16,12 @@ namespace HospitalManagementSystems
         {
             InitializeComponent();
         }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            LoginForm  loginForm = new LoginForm();
+            loginForm.Show();
+            this.Hide();
+        }
     }
 }
