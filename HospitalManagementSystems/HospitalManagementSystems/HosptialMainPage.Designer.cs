@@ -48,43 +48,48 @@
             // 
             // buttonPatientManagement
             // 
+            this.buttonPatientManagement.BackColor = System.Drawing.Color.Cyan;
             this.buttonPatientManagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPatientManagement.Location = new System.Drawing.Point(203, 157);
             this.buttonPatientManagement.Name = "buttonPatientManagement";
             this.buttonPatientManagement.Size = new System.Drawing.Size(170, 57);
             this.buttonPatientManagement.TabIndex = 1;
             this.buttonPatientManagement.Text = "Patient Management";
-            this.buttonPatientManagement.UseVisualStyleBackColor = true;
+            this.buttonPatientManagement.UseVisualStyleBackColor = false;
             // 
             // buttonMedicalInventoryManagement
             // 
+            this.buttonMedicalInventoryManagement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.buttonMedicalInventoryManagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonMedicalInventoryManagement.Location = new System.Drawing.Point(203, 246);
             this.buttonMedicalInventoryManagement.Name = "buttonMedicalInventoryManagement";
             this.buttonMedicalInventoryManagement.Size = new System.Drawing.Size(170, 57);
             this.buttonMedicalInventoryManagement.TabIndex = 2;
             this.buttonMedicalInventoryManagement.Text = "Medical Inventory Management";
-            this.buttonMedicalInventoryManagement.UseVisualStyleBackColor = true;
+            this.buttonMedicalInventoryManagement.UseVisualStyleBackColor = false;
             // 
             // buttonAppointmentScheduling
             // 
+            this.buttonAppointmentScheduling.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.buttonAppointmentScheduling.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAppointmentScheduling.Location = new System.Drawing.Point(397, 157);
             this.buttonAppointmentScheduling.Name = "buttonAppointmentScheduling";
             this.buttonAppointmentScheduling.Size = new System.Drawing.Size(170, 57);
             this.buttonAppointmentScheduling.TabIndex = 3;
             this.buttonAppointmentScheduling.Text = "Appointment Scheduling";
-            this.buttonAppointmentScheduling.UseVisualStyleBackColor = true;
+            this.buttonAppointmentScheduling.UseVisualStyleBackColor = false;
+            this.buttonAppointmentScheduling.Click += new System.EventHandler(this.buttonAppointmentScheduling_Click);
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.Gold;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(397, 246);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(170, 57);
             this.button4.TabIndex = 4;
             this.button4.Text = "Message";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // buttonExit
             // 

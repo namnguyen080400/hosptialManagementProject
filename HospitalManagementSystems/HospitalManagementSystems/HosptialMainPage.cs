@@ -23,5 +23,10 @@ namespace HospitalManagementSystems
             loginForm.Show();
             this.Hide();
         }
+
+        private void buttonAppointmentScheduling_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

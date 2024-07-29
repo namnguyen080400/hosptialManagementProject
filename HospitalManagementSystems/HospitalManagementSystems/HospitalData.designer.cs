@@ -48,6 +48,12 @@ namespace HospitalManagementSystems
     partial void InsertDoctor(Doctor instance);
     partial void UpdateDoctor(Doctor instance);
     partial void DeleteDoctor(Doctor instance);
+    partial void InsertPatient(Patient instance);
+    partial void UpdatePatient(Patient instance);
+    partial void DeletePatient(Patient instance);
+    partial void InsertPatientCareProvider(PatientCareProvider instance);
+    partial void UpdatePatientCareProvider(PatientCareProvider instance);
+    partial void DeletePatientCareProvider(PatientCareProvider instance);
     #endregion
 		
 		public HospitalDataDataContext() : 
@@ -125,6 +131,22 @@ namespace HospitalManagementSystems
 			get
 			{
 				return this.GetTable<Doctor>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Patient> Patients
+		{
+			get
+			{
+				return this.GetTable<Patient>();
+			}
+		}
+		
+		public System.Data.Linq.Table<PatientCareProvider> PatientCareProviders
+		{
+			get
+			{
+				return this.GetTable<PatientCareProvider>();
 			}
 		}
 	}
@@ -1004,6 +1026,202 @@ namespace HospitalManagementSystems
 					this._Expertise = value;
 					this.SendPropertyChanged("Expertise");
 					this.OnExpertiseChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Patients")]
+	public partial class Patient : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _PatientId;
+		
+		private int _LoginId;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnPatientIdChanging(int value);
+    partial void OnPatientIdChanged();
+    partial void OnLoginIdChanging(int value);
+    partial void OnLoginIdChanged();
+    #endregion
+		
+		public Patient()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PatientId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int PatientId
+		{
+			get
+			{
+				return this._PatientId;
+			}
+			set
+			{
+				if ((this._PatientId != value))
+				{
+					this.OnPatientIdChanging(value);
+					this.SendPropertyChanging();
+					this._PatientId = value;
+					this.SendPropertyChanged("PatientId");
+					this.OnPatientIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LoginId", DbType="Int NOT NULL")]
+		public int LoginId
+		{
+			get
+			{
+				return this._LoginId;
+			}
+			set
+			{
+				if ((this._LoginId != value))
+				{
+					this.OnLoginIdChanging(value);
+					this.SendPropertyChanging();
+					this._LoginId = value;
+					this.SendPropertyChanged("LoginId");
+					this.OnLoginIdChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.PatientCareProvider")]
+	public partial class PatientCareProvider : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _PatientCareProviderId;
+		
+		private System.Nullable<int> _PatientId;
+		
+		private System.Nullable<int> _DoctorId;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnPatientCareProviderIdChanging(int value);
+    partial void OnPatientCareProviderIdChanged();
+    partial void OnPatientIdChanging(System.Nullable<int> value);
+    partial void OnPatientIdChanged();
+    partial void OnDoctorIdChanging(System.Nullable<int> value);
+    partial void OnDoctorIdChanged();
+    #endregion
+		
+		public PatientCareProvider()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PatientCareProviderId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int PatientCareProviderId
+		{
+			get
+			{
+				return this._PatientCareProviderId;
+			}
+			set
+			{
+				if ((this._PatientCareProviderId != value))
+				{
+					this.OnPatientCareProviderIdChanging(value);
+					this.SendPropertyChanging();
+					this._PatientCareProviderId = value;
+					this.SendPropertyChanged("PatientCareProviderId");
+					this.OnPatientCareProviderIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PatientId", DbType="Int")]
+		public System.Nullable<int> PatientId
+		{
+			get
+			{
+				return this._PatientId;
+			}
+			set
+			{
+				if ((this._PatientId != value))
+				{
+					this.OnPatientIdChanging(value);
+					this.SendPropertyChanging();
+					this._PatientId = value;
+					this.SendPropertyChanged("PatientId");
+					this.OnPatientIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DoctorId", DbType="Int")]
+		public System.Nullable<int> DoctorId
+		{
+			get
+			{
+				return this._DoctorId;
+			}
+			set
+			{
+				if ((this._DoctorId != value))
+				{
+					this.OnDoctorIdChanging(value);
+					this.SendPropertyChanging();
+					this._DoctorId = value;
+					this.SendPropertyChanged("DoctorId");
+					this.OnDoctorIdChanged();
 				}
 			}
 		}

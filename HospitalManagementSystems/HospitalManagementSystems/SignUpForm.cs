@@ -100,7 +100,14 @@ namespace HospitalManagementSystems
                     hospitalContext.ContactInfos.InsertOnSubmit(newContact);
                     hospitalContext.SubmitChanges();
 
-                    if (comboBoxExpertise.SelectedIndex == 2)
+                    Patient newPatent = new Patient
+                    {
+                        LoginId = newLogin.LoginId
+                    };
+                    hospitalContext.Patients.InsertOnSubmit(newPatent);
+                    hospitalContext.SubmitChanges();
+
+                    if (comboBoxUserType.SelectedIndex == 2)
                     {
                         Doctor newDoctor = new Doctor
                         {
@@ -190,6 +197,19 @@ namespace HospitalManagementSystems
                 MessageBox.Show("Please enter zip code.");
                 return false;
             }
+            if (comboBoxUserType.SelectedIndex == 0)
+            {
+                MessageBox.Show("Please select your role.");
+                return false;
+            }
+            if (comboBoxUserType.SelectedIndex == 2)
+            {
+                if (comboBoxExpertise.SelectedIndex == 0)
+                {
+                    MessageBox.Show("Please select your expertise.");
+                    return false;
+                }
+            }
             return result;
         }
 
@@ -216,7 +236,8 @@ namespace HospitalManagementSystems
             this.Close();
         }
 
-        private void comboBoxExpertise_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void comboBoxUserType_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBoxUserType.SelectedIndex == 2)
             {

@@ -257,6 +257,7 @@
             this.comboBoxUserType.Name = "comboBoxUserType";
             this.comboBoxUserType.Size = new System.Drawing.Size(162, 28);
             this.comboBoxUserType.TabIndex = 28;
+            this.comboBoxUserType.SelectedIndexChanged += new System.EventHandler(this.comboBoxUserType_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -444,7 +445,6 @@
             this.comboBoxExpertise.Name = "comboBoxExpertise";
             this.comboBoxExpertise.Size = new System.Drawing.Size(162, 28);
             this.comboBoxExpertise.TabIndex = 37;
-            this.comboBoxExpertise.SelectedIndexChanged += new System.EventHandler(this.comboBoxExpertise_SelectedIndexChanged);
             // 
             // SignUpForm
             // 

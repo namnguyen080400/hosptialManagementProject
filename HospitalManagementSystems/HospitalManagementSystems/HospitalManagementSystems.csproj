@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppointmentScheduleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppointmentScheduleForm.Designer.cs">
+      <DependentUpon>AppointmentScheduleForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="HospitalData.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -89,6 +95,9 @@
     <Compile Include="SignUpForm.Designer.cs">
       <DependentUpon>SignUpForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AppointmentScheduleForm.resx">
+      <DependentUpon>AppointmentScheduleForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HospitalManagementHomepageForm.resx">
       <DependentUpon>HospitalManagementHomepageForm.cs</DependentUpon>
     </EmbeddedResource>
