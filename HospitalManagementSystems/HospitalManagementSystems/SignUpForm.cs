@@ -18,6 +18,16 @@ namespace HospitalManagementSystems
             string[] roleType = {"Select Role", "Patient", "Doctor", "Nurse", "Staff" };
             comboBoxUserType.DataSource = roleType;
             comboBoxUserType.SelectedIndex = 0;
+
+            string[] gender = { "Select gender", "Male", "Female" };
+            comboBoxGender.DataSource = gender;
+            comboBoxGender.SelectedIndex = 0;
+
+            comboBoxExpertise.Visible = false;
+            labelExpertise.Visible = false;
+
+            labelPrimaryDoctor.Visible = false;
+            textBoxPrimaryDoctor.Visible = false;
         }
 
         HospitalDataDataContext hospitalContext = new HospitalDataDataContext();
@@ -30,7 +40,7 @@ namespace HospitalManagementSystems
             string username = textBoxUsername.Text;
             string password = textBoxPassword.Text;
             string dob = textBoxDOB.Text;
-            string gender = textBoxGender.Text;
+            string gender = comboBoxGender.SelectedIndex.ToString();
             string email = textBoxEmail.Text;
             string homePhone = textBoxHomePhone.Text;
             string mobilePhone = textBoxMobilePhone.Text;
@@ -39,6 +49,7 @@ namespace HospitalManagementSystems
             string city = textBoxCity.Text;
             string state = textBoxState.Text;
             string zipCode = textBoxZipCode.Text;
+            string primaryDoctor = textBoxPrimaryDoctor.Text;
 
             if (checkRegistrationValidty()) // user entered all the fields
             {
@@ -100,11 +111,12 @@ namespace HospitalManagementSystems
                     hospitalContext.ContactInfos.InsertOnSubmit(newContact);
                     hospitalContext.SubmitChanges();
 
-                    Patient newPatent = new Patient
+                    Patient newPatient = new Patient
                     {
-                        LoginId = newLogin.LoginId
+                        LoginId = newLogin.LoginId,
+                        PrimaryDoctor = primaryDoctor
                     };
-                    hospitalContext.Patients.InsertOnSubmit(newPatent);
+                    hospitalContext.Patients.InsertOnSubmit(newPatient);
                     hospitalContext.SubmitChanges();
 
                     if (comboBoxUserType.SelectedIndex == 2)
@@ -117,6 +129,11 @@ namespace HospitalManagementSystems
                         hospitalContext.Doctors.InsertOnSubmit(newDoctor);
                         hospitalContext.SubmitChanges();
                     }
+
+                    PatientCareProvider newCareProvider = new PatientCareProvider
+                    {
+                        PatientId = newPatient.PatientId
+                    };
                     MessageBox.Show("Sign up sucessful");
                 }
             }
@@ -152,9 +169,9 @@ namespace HospitalManagementSystems
                 MessageBox.Show("Please enter date of birth.");
                 return false;
             }
-            if (textBoxGender.Text == "")
+            if (comboBoxGender.SelectedIndex == 0)
             {
-                MessageBox.Show("Please enter gender.");
+                MessageBox.Show("Please select gender.");
                 return false;
             }
             if (textBoxEmail.Text == "")
@@ -197,6 +214,11 @@ namespace HospitalManagementSystems
                 MessageBox.Show("Please enter zip code.");
                 return false;
             }
+            if (textBoxPrimaryDoctor.Text == "")
+            {
+                MessageBox.Show("Please enter primary doctor.");
+                return false;
+            }
             if (comboBoxUserType.SelectedIndex == 0)
             {
                 MessageBox.Show("Please select your role.");
@@ -220,7 +242,6 @@ namespace HospitalManagementSystems
             textBoxUsername.Clear();
             textBoxPassword.Clear();
             textBoxDOB.Clear();
-            textBoxGender.Clear();
             textBoxEmail.Clear();
             textBoxHomePhone.Clear();
             textBoxMobilePhone.Clear();
@@ -229,6 +250,7 @@ namespace HospitalManagementSystems
             textBoxCity.Clear();
             textBoxState.Clear();
             textBoxZipCode.Clear();
+            textBoxPrimaryDoctor.Clear();
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
@@ -239,12 +261,20 @@ namespace HospitalManagementSystems
 
         private void comboBoxUserType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBoxUserType.SelectedIndex == 2)
+            if (comboBoxUserType.SelectedIndex == 2) // doctor
             {
                 string[] expertiseType = { "Select expertise","Primary care physician", "Allergists", "Anesthesiologists", "Cardiologists",
                                         "Colon and Rectal Surgeons", "Dermatologists", "Endocrinologists", "Gastroenterologists"};
                 comboBoxExpertise.DataSource = expertiseType;
                 comboBoxExpertise.SelectedIndex = 0;
+
+                comboBoxExpertise.Visible = true;
+                labelExpertise.Visible = true;
+            }
+            else if (comboBoxUserType.SelectedIndex == 1) // patient
+            {
+                labelPrimaryDoctor.Visible = true;
+                textBoxPrimaryDoctor.Visible = true;
             }
         }
     }

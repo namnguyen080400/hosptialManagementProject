@@ -52,17 +52,18 @@
       <Column Name="Expertise" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
-  <Table Name="dbo.Patients" Member="Patients">
-    <Type Name="Patient">
-      <Column Name="PatientId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="LoginId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </Type>
-  </Table>
   <Table Name="dbo.PatientCareProvider" Member="PatientCareProviders">
     <Type Name="PatientCareProvider">
       <Column Name="PatientCareProviderId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="PatientId" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="DoctorId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Patients" Member="Patients">
+    <Type Name="Patient">
+      <Column Name="PatientId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LoginId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PrimaryDoctor" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>
