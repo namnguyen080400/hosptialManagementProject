@@ -51,7 +51,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBoxZipCode = new System.Windows.Forms.TextBox();
-            this.textBoxState = new System.Windows.Forms.TextBox();
             this.textBoxCity = new System.Windows.Forms.TextBox();
             this.textBoxStreet = new System.Windows.Forms.TextBox();
             this.textBoxAddressNumber = new System.Windows.Forms.TextBox();
@@ -69,6 +68,7 @@
             this.textBoxPrimaryDoctor = new System.Windows.Forms.TextBox();
             this.labelPrimaryDoctor = new System.Windows.Forms.Label();
             this.comboBoxGender = new System.Windows.Forms.ComboBox();
+            this.comboBoxStateName = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -273,8 +273,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBoxStateName);
             this.groupBox1.Controls.Add(this.textBoxZipCode);
-            this.groupBox1.Controls.Add(this.textBoxState);
             this.groupBox1.Controls.Add(this.textBoxCity);
             this.groupBox1.Controls.Add(this.textBoxStreet);
             this.groupBox1.Controls.Add(this.textBoxAddressNumber);
@@ -293,17 +293,10 @@
             // 
             // textBoxZipCode
             // 
-            this.textBoxZipCode.Location = new System.Drawing.Point(308, 114);
+            this.textBoxZipCode.Location = new System.Drawing.Point(350, 117);
             this.textBoxZipCode.Name = "textBoxZipCode";
             this.textBoxZipCode.Size = new System.Drawing.Size(120, 26);
             this.textBoxZipCode.TabIndex = 10;
-            // 
-            // textBoxState
-            // 
-            this.textBoxState.Location = new System.Drawing.Point(94, 114);
-            this.textBoxState.Name = "textBoxState";
-            this.textBoxState.Size = new System.Drawing.Size(120, 26);
-            this.textBoxState.TabIndex = 9;
             // 
             // textBoxCity
             // 
@@ -314,7 +307,7 @@
             // 
             // textBoxStreet
             // 
-            this.textBoxStreet.Location = new System.Drawing.Point(308, 45);
+            this.textBoxStreet.Location = new System.Drawing.Point(323, 42);
             this.textBoxStreet.Name = "textBoxStreet";
             this.textBoxStreet.Size = new System.Drawing.Size(120, 26);
             this.textBoxStreet.TabIndex = 7;
@@ -329,7 +322,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(233, 117);
+            this.label16.Location = new System.Drawing.Point(262, 117);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(73, 20);
             this.label16.TabIndex = 4;
@@ -356,7 +349,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(233, 45);
+            this.label13.Location = new System.Drawing.Point(262, 42);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(53, 20);
             this.label13.TabIndex = 1;
@@ -467,6 +460,15 @@
             this.comboBoxGender.Size = new System.Drawing.Size(162, 28);
             this.comboBoxGender.TabIndex = 39;
             // 
+            // comboBoxStateName
+            // 
+            this.comboBoxStateName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxStateName.FormattingEnabled = true;
+            this.comboBoxStateName.Location = new System.Drawing.Point(94, 115);
+            this.comboBoxStateName.Name = "comboBoxStateName";
+            this.comboBoxStateName.Size = new System.Drawing.Size(145, 28);
+            this.comboBoxStateName.TabIndex = 29;
+            // 
             // SignUpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -533,7 +535,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBoxZipCode;
-        private System.Windows.Forms.TextBox textBoxState;
         private System.Windows.Forms.TextBox textBoxCity;
         private System.Windows.Forms.TextBox textBoxStreet;
         private System.Windows.Forms.TextBox textBoxAddressNumber;
@@ -551,5 +552,6 @@
         private System.Windows.Forms.TextBox textBoxPrimaryDoctor;
         private System.Windows.Forms.Label labelPrimaryDoctor;
         private System.Windows.Forms.ComboBox comboBoxGender;
+        private System.Windows.Forms.ComboBox comboBoxStateName;
     }
 }

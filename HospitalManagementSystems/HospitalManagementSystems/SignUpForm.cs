@@ -4,9 +4,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
+using System.Xml.Linq;
 
 namespace HospitalManagementSystems
 {
@@ -23,6 +26,17 @@ namespace HospitalManagementSystems
             comboBoxGender.DataSource = gender;
             comboBoxGender.SelectedIndex = 0;
 
+            string[] state = { "Select State", "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut",
+                              "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas",
+                              "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota",
+                              "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire",
+                              "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio",
+                              "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina",
+                              "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington",
+                              "West Virginia", "Wisconsin", "Wyoming"}; 
+            comboBoxStateName.DataSource = state;
+            comboBoxStateName.SelectedIndex = 0;
+
             comboBoxExpertise.Visible = false;
             labelExpertise.Visible = false;
 
@@ -32,6 +46,7 @@ namespace HospitalManagementSystems
 
         HospitalDataDataContext hospitalContext = new HospitalDataDataContext();
 
+        // function to handle sign up button click
         private void buttonSignUp_Click(object sender, EventArgs e)
         {
             // get all inputs from user
@@ -47,7 +62,7 @@ namespace HospitalManagementSystems
             string streetNumber = textBoxAddressNumber.Text;
             string streetName = textBoxStreet.Text;
             string city = textBoxCity.Text;
-            string state = textBoxState.Text;
+            string state = comboBoxStateName.SelectedIndex.ToString();
             string zipCode = textBoxZipCode.Text;
             string primaryDoctor = textBoxPrimaryDoctor.Text;
 
@@ -101,6 +116,7 @@ namespace HospitalManagementSystems
                     hospitalContext.Peoples.InsertOnSubmit(newPeople);
                     hospitalContext.SubmitChanges();
 
+                    // add new contact to database
                     ContactInfo newContact = new ContactInfo
                     {
                         AddressId = newAddress.AddressId,
@@ -111,6 +127,7 @@ namespace HospitalManagementSystems
                     hospitalContext.ContactInfos.InsertOnSubmit(newContact);
                     hospitalContext.SubmitChanges();
 
+                    // add new patient to database
                     Patient newPatient = new Patient
                     {
                         LoginId = newLogin.LoginId,
@@ -119,8 +136,10 @@ namespace HospitalManagementSystems
                     hospitalContext.Patients.InsertOnSubmit(newPatient);
                     hospitalContext.SubmitChanges();
 
+                    // check if doctor is selected from combobox
                     if (comboBoxUserType.SelectedIndex == 2)
                     {
+                        // add new doctor to database
                         Doctor newDoctor = new Doctor
                         {
                             UserId = newPeople.UserId,
@@ -129,11 +148,6 @@ namespace HospitalManagementSystems
                         hospitalContext.Doctors.InsertOnSubmit(newDoctor);
                         hospitalContext.SubmitChanges();
                     }
-
-                    PatientCareProvider newCareProvider = new PatientCareProvider
-                    {
-                        PatientId = newPatient.PatientId
-                    };
                     MessageBox.Show("Sign up sucessful");
                 }
             }
@@ -204,9 +218,9 @@ namespace HospitalManagementSystems
                 MessageBox.Show("Please enter city.");
                 return false;
             }
-            if (textBoxState.Text == "")
+            if (comboBoxStateName.SelectedIndex == 0)
             {
-                MessageBox.Show("Please enter state.");
+                MessageBox.Show("Please select state.");
                 return false;
             }
             if (textBoxZipCode.Text == "")
@@ -235,6 +249,8 @@ namespace HospitalManagementSystems
             return result;
         }
 
+        // function to handle button clear click. this allow to user to clear form
+        // when they make a mistake 
         private void buttonClear_Click(object sender, EventArgs e)
         {
             textBoxFirstName.Clear();
@@ -248,7 +264,6 @@ namespace HospitalManagementSystems
             textBoxAddressNumber.Clear();
             textBoxStreet.Clear();
             textBoxCity.Clear();
-            textBoxState.Clear();
             textBoxZipCode.Clear();
             textBoxPrimaryDoctor.Clear();
         }
@@ -258,7 +273,7 @@ namespace HospitalManagementSystems
             this.Close();
         }
 
-
+        // function to handle combobox user type
         private void comboBoxUserType_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBoxUserType.SelectedIndex == 2) // doctor
@@ -268,13 +283,41 @@ namespace HospitalManagementSystems
                 comboBoxExpertise.DataSource = expertiseType;
                 comboBoxExpertise.SelectedIndex = 0;
 
+                // display expertise label and combobox expertise
                 comboBoxExpertise.Visible = true;
                 labelExpertise.Visible = true;
+
+                // hide primary doctor label and textbox
+                labelPrimaryDoctor.Visible = false;
+                textBoxPrimaryDoctor.Visible = false;
             }
             else if (comboBoxUserType.SelectedIndex == 1) // patient
             {
+                // display primary doctor label and textbox
                 labelPrimaryDoctor.Visible = true;
                 textBoxPrimaryDoctor.Visible = true;
+
+                // hide expertise label and combobox
+                comboBoxExpertise.Visible = false;
+                labelExpertise.Visible = false;
+            }
+            else if (comboBoxUserType.SelectedIndex == 0) // user hasn't select role
+            {
+                // hide every fields below
+                comboBoxExpertise.Visible = false;
+                labelExpertise.Visible = false;
+
+                labelPrimaryDoctor.Visible = false;
+                textBoxPrimaryDoctor.Visible = false;
+            }
+            else if (comboBoxUserType.SelectedIndex >= 3) // nurse and staff
+            {
+                // hide every fields below
+                comboBoxExpertise.Visible = false;
+                labelExpertise.Visible = false;
+
+                labelPrimaryDoctor.Visible = false;
+                textBoxPrimaryDoctor.Visible = false;
             }
         }
     }
