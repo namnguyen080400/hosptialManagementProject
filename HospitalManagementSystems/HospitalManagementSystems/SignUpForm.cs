@@ -37,6 +37,14 @@ namespace HospitalManagementSystems
             comboBoxStateName.DataSource = state;
             comboBoxStateName.SelectedIndex = 0;
 
+            string[] ethnicity = { "Select ethnicity", "African", "Caribbean", "Indian", "Melanesian", "Australasian/Aboriginal",
+                                    "Chinese", "Guamanian", "Japanese", "Korean", "Polynesian", "European/Anglo Saxon",
+                                    "Other Pacific Islander", "Latin American", "Arabic", "Vietnamese", "Micronesian",
+                                    "Other Hispanic", "US or Canadian Indian", "Other Asian", "Puerto Rican", "Filipino",
+                                    "Mexican", "Alaskan Native", "Cuban"};
+            comboBoxEthnicity.DataSource = ethnicity;
+            comboBoxEthnicity.SelectedIndex = 0;
+
             comboBoxExpertise.Visible = false;
             labelExpertise.Visible = false;
 
@@ -55,16 +63,30 @@ namespace HospitalManagementSystems
             string username = textBoxUsername.Text;
             string password = textBoxPassword.Text;
             string dob = textBoxDOB.Text;
-            string gender = comboBoxGender.SelectedIndex.ToString();
+            string gender = comboBoxGender.SelectedValue.ToString();
+            string ethnicity = comboBoxEthnicity.SelectedValue.ToString();
             string email = textBoxEmail.Text;
             string homePhone = textBoxHomePhone.Text;
             string mobilePhone = textBoxMobilePhone.Text;
             string streetNumber = textBoxAddressNumber.Text;
             string streetName = textBoxStreet.Text;
             string city = textBoxCity.Text;
-            string state = comboBoxStateName.SelectedIndex.ToString();
+            string state = comboBoxStateName.SelectedValue.ToString();
             string zipCode = textBoxZipCode.Text;
             string primaryDoctor = textBoxPrimaryDoctor.Text;
+
+            if (comboBoxEthnicity.SelectedIndex == 0)
+            {
+                ethnicity = null;
+            }
+            if (textBoxHomePhone.Text == "")
+            {
+                homePhone = null;
+            }
+            if (textBoxPrimaryDoctor.Text == "")
+            {
+                primaryDoctor = null;
+            }
 
             if (checkRegistrationValidty()) // user entered all the fields
             {
@@ -111,7 +133,8 @@ namespace HospitalManagementSystems
                         FirstName = firstName,
                         LastName = lastName,
                         DateOfBirth = DateTime.Parse(dob),
-                        Gender = gender
+                        Gender = gender,
+                        Ethnicity = ethnicity
                     };
                     hospitalContext.Peoples.InsertOnSubmit(newPeople);
                     hospitalContext.SubmitChanges();
@@ -193,11 +216,6 @@ namespace HospitalManagementSystems
                 MessageBox.Show("Please enter email address.");
                 return false;
             }
-            if (textBoxHomePhone.Text == "")
-            {
-                MessageBox.Show("Please enter home phone.");
-                return false;
-            }
             if (textBoxMobilePhone.Text == "")
             {
                 MessageBox.Show("Please enter mobile phone.");
@@ -226,11 +244,6 @@ namespace HospitalManagementSystems
             if (textBoxZipCode.Text == "")
             {
                 MessageBox.Show("Please enter zip code.");
-                return false;
-            }
-            if (textBoxPrimaryDoctor.Text == "")
-            {
-                MessageBox.Show("Please enter primary doctor.");
                 return false;
             }
             if (comboBoxUserType.SelectedIndex == 0)

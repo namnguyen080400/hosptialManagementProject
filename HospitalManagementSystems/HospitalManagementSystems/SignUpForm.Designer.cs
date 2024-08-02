@@ -50,6 +50,7 @@
             this.comboBoxUserType = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBoxStateName = new System.Windows.Forms.ComboBox();
             this.textBoxZipCode = new System.Windows.Forms.TextBox();
             this.textBoxCity = new System.Windows.Forms.TextBox();
             this.textBoxStreet = new System.Windows.Forms.TextBox();
@@ -68,7 +69,8 @@
             this.textBoxPrimaryDoctor = new System.Windows.Forms.TextBox();
             this.labelPrimaryDoctor = new System.Windows.Forms.Label();
             this.comboBoxGender = new System.Windows.Forms.ComboBox();
-            this.comboBoxStateName = new System.Windows.Forms.ComboBox();
+            this.comboBoxEthnicity = new System.Windows.Forms.ComboBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -77,7 +79,7 @@
             // 
             this.buttonSignUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.buttonSignUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSignUp.Location = new System.Drawing.Point(229, 900);
+            this.buttonSignUp.Location = new System.Drawing.Point(230, 927);
             this.buttonSignUp.Name = "buttonSignUp";
             this.buttonSignUp.Size = new System.Drawing.Size(108, 29);
             this.buttonSignUp.TabIndex = 13;
@@ -255,7 +257,7 @@
             // 
             this.comboBoxUserType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxUserType.FormattingEnabled = true;
-            this.comboBoxUserType.Location = new System.Drawing.Point(222, 806);
+            this.comboBoxUserType.Location = new System.Drawing.Point(223, 833);
             this.comboBoxUserType.Name = "comboBoxUserType";
             this.comboBoxUserType.Size = new System.Drawing.Size(162, 28);
             this.comboBoxUserType.TabIndex = 28;
@@ -265,7 +267,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(94, 806);
+            this.label11.Location = new System.Drawing.Point(95, 833);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(49, 20);
             this.label11.TabIndex = 29;
@@ -284,12 +286,21 @@
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(98, 532);
+            this.groupBox1.Location = new System.Drawing.Point(99, 559);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(632, 219);
             this.groupBox1.TabIndex = 30;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Address";
+            // 
+            // comboBoxStateName
+            // 
+            this.comboBoxStateName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxStateName.FormattingEnabled = true;
+            this.comboBoxStateName.Location = new System.Drawing.Point(94, 115);
+            this.comboBoxStateName.Name = "comboBoxStateName";
+            this.comboBoxStateName.Size = new System.Drawing.Size(145, 28);
+            this.comboBoxStateName.TabIndex = 29;
             // 
             // textBoxZipCode
             // 
@@ -314,9 +325,9 @@
             // 
             // textBoxAddressNumber
             // 
-            this.textBoxAddressNumber.Location = new System.Drawing.Point(94, 45);
+            this.textBoxAddressNumber.Location = new System.Drawing.Point(96, 42);
             this.textBoxAddressNumber.Name = "textBoxAddressNumber";
-            this.textBoxAddressNumber.Size = new System.Drawing.Size(120, 26);
+            this.textBoxAddressNumber.Size = new System.Drawing.Size(143, 26);
             this.textBoxAddressNumber.TabIndex = 6;
             // 
             // label16
@@ -324,45 +335,45 @@
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(262, 117);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(73, 20);
+            this.label16.Size = new System.Drawing.Size(79, 20);
             this.label16.TabIndex = 4;
-            this.label16.Text = "Zip Code";
+            this.label16.Text = "*Zip Code";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(28, 114);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(48, 20);
+            this.label15.Size = new System.Drawing.Size(54, 20);
             this.label15.TabIndex = 3;
-            this.label15.Text = "State";
+            this.label15.Text = "*State";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(449, 48);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(35, 20);
+            this.label14.Size = new System.Drawing.Size(41, 20);
             this.label14.TabIndex = 2;
-            this.label14.Text = "City";
+            this.label14.Text = "*City";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(262, 42);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(53, 20);
+            this.label13.Size = new System.Drawing.Size(59, 20);
             this.label13.TabIndex = 1;
-            this.label13.Text = "Street";
+            this.label13.Text = "*Street";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(28, 45);
+            this.label12.Location = new System.Drawing.Point(22, 45);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(65, 20);
+            this.label12.Size = new System.Drawing.Size(71, 20);
             this.label12.TabIndex = 0;
-            this.label12.Text = "Number";
+            this.label12.Text = "*Number";
             // 
             // label17
             // 
@@ -383,7 +394,7 @@
             this.groupBox2.Controls.Add(this.textBoxMobilePhone);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(98, 333);
+            this.groupBox2.Location = new System.Drawing.Point(99, 360);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(620, 171);
             this.groupBox2.TabIndex = 33;
@@ -394,7 +405,7 @@
             // 
             this.buttonClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.buttonClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClear.Location = new System.Drawing.Point(362, 900);
+            this.buttonClear.Location = new System.Drawing.Point(363, 927);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(108, 29);
             this.buttonClear.TabIndex = 34;
@@ -406,7 +417,7 @@
             // 
             this.buttonExit.BackColor = System.Drawing.Color.Red;
             this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExit.Location = new System.Drawing.Point(495, 900);
+            this.buttonExit.Location = new System.Drawing.Point(496, 927);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(108, 29);
             this.buttonExit.TabIndex = 35;
@@ -418,7 +429,7 @@
             // 
             this.labelExpertise.AutoSize = true;
             this.labelExpertise.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelExpertise.Location = new System.Drawing.Point(414, 806);
+            this.labelExpertise.Location = new System.Drawing.Point(415, 833);
             this.labelExpertise.Name = "labelExpertise";
             this.labelExpertise.Size = new System.Drawing.Size(81, 20);
             this.labelExpertise.TabIndex = 36;
@@ -428,7 +439,7 @@
             // 
             this.comboBoxExpertise.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxExpertise.FormattingEnabled = true;
-            this.comboBoxExpertise.Location = new System.Drawing.Point(556, 803);
+            this.comboBoxExpertise.Location = new System.Drawing.Point(557, 830);
             this.comboBoxExpertise.Name = "comboBoxExpertise";
             this.comboBoxExpertise.Size = new System.Drawing.Size(162, 28);
             this.comboBoxExpertise.TabIndex = 37;
@@ -436,7 +447,7 @@
             // textBoxPrimaryDoctor
             // 
             this.textBoxPrimaryDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPrimaryDoctor.Location = new System.Drawing.Point(222, 849);
+            this.textBoxPrimaryDoctor.Location = new System.Drawing.Point(223, 876);
             this.textBoxPrimaryDoctor.Name = "textBoxPrimaryDoctor";
             this.textBoxPrimaryDoctor.Size = new System.Drawing.Size(162, 26);
             this.textBoxPrimaryDoctor.TabIndex = 27;
@@ -445,7 +456,7 @@
             // 
             this.labelPrimaryDoctor.AutoSize = true;
             this.labelPrimaryDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPrimaryDoctor.Location = new System.Drawing.Point(94, 849);
+            this.labelPrimaryDoctor.Location = new System.Drawing.Point(95, 876);
             this.labelPrimaryDoctor.Name = "labelPrimaryDoctor";
             this.labelPrimaryDoctor.Size = new System.Drawing.Size(113, 20);
             this.labelPrimaryDoctor.TabIndex = 38;
@@ -460,14 +471,24 @@
             this.comboBoxGender.Size = new System.Drawing.Size(162, 28);
             this.comboBoxGender.TabIndex = 39;
             // 
-            // comboBoxStateName
+            // comboBoxEthnicity
             // 
-            this.comboBoxStateName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxStateName.FormattingEnabled = true;
-            this.comboBoxStateName.Location = new System.Drawing.Point(94, 115);
-            this.comboBoxStateName.Name = "comboBoxStateName";
-            this.comboBoxStateName.Size = new System.Drawing.Size(145, 28);
-            this.comboBoxStateName.TabIndex = 29;
+            this.comboBoxEthnicity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxEthnicity.FormattingEnabled = true;
+            this.comboBoxEthnicity.Location = new System.Drawing.Point(234, 326);
+            this.comboBoxEthnicity.Name = "comboBoxEthnicity";
+            this.comboBoxEthnicity.Size = new System.Drawing.Size(162, 28);
+            this.comboBoxEthnicity.TabIndex = 40;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(117, 329);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(69, 20);
+            this.label18.TabIndex = 41;
+            this.label18.Text = "Ethnicity";
             // 
             // SignUpForm
             // 
@@ -475,6 +496,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(800, 977);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.comboBoxEthnicity);
             this.Controls.Add(this.comboBoxGender);
             this.Controls.Add(this.labelPrimaryDoctor);
             this.Controls.Add(this.textBoxPrimaryDoctor);
@@ -553,5 +576,7 @@
         private System.Windows.Forms.Label labelPrimaryDoctor;
         private System.Windows.Forms.ComboBox comboBoxGender;
         private System.Windows.Forms.ComboBox comboBoxStateName;
+        private System.Windows.Forms.ComboBox comboBoxEthnicity;
+        private System.Windows.Forms.Label label18;
     }
 }
