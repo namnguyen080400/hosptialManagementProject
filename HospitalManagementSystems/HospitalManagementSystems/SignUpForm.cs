@@ -37,7 +37,7 @@ namespace HospitalManagementSystems
             comboBoxStateName.DataSource = state;
             comboBoxStateName.SelectedIndex = 0;
 
-            string[] ethnicity = { "Select ethnicity", "African", "Caribbean", "Indian", "Melanesian", "Australasian/Aboriginal",
+            string[] ethnicity = { "Select ethnicity", "Caucasian", "African", "Caribbean", "Indian", "Melanesian", "Australasian/Aboriginal",
                                     "Chinese", "Guamanian", "Japanese", "Korean", "Polynesian", "European/Anglo Saxon",
                                     "Other Pacific Islander", "Latin American", "Arabic", "Vietnamese", "Micronesian",
                                     "Other Hispanic", "US or Canadian Indian", "Other Asian", "Puerto Rican", "Filipino",
@@ -279,6 +279,10 @@ namespace HospitalManagementSystems
             textBoxCity.Clear();
             textBoxZipCode.Clear();
             textBoxPrimaryDoctor.Clear();
+            comboBoxEthnicity.SelectedIndex = 0;
+            comboBoxGender.SelectedIndex = 0;
+            comboBoxUserType.SelectedIndex = 0;
+            comboBoxStateName.SelectedIndex = 0;
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
