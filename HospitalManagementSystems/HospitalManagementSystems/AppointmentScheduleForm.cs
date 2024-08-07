@@ -26,14 +26,16 @@ namespace HospitalManagementSystems
 
         private void buttonScheduleAppointment_Click(object sender, EventArgs e)
         {
-            var queries = from login in hospitalContext.Logins
-                          join people in hospitalContext.Peoples
-                          on login.LoginId equals people.LoginId
-                          join role in hospitalContext.Roles
-                          on people.RoleId equals role.RoleId
+            var queries = people in hospitalContext.Peoples
+                          join contactInfo in hospitalContext.ContactInfos
+                          on people.AddressId equals contactInfo.AddressId
                           select new
                           {
-
+                              FirstName = $"{people.FirstName}",
+                              LastName = $"{people.LastName}",
+                              DateOfBirth = $"{people.DateOfBirth}",
+                              HomePhone = $"{contactInfo.HomePhone}",
+                              MobilePhone = $"{contactInfo.MobilePhone}"
                           };
         }
     }
