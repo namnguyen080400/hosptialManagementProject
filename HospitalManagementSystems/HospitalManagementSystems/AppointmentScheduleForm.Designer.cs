@@ -39,6 +39,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBoxSearchDoctor = new System.Windows.Forms.ComboBox();
+            this.buttonSearchPatients = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -145,12 +146,25 @@
             this.comboBoxSearchDoctor.Size = new System.Drawing.Size(162, 28);
             this.comboBoxSearchDoctor.TabIndex = 24;
             // 
+            // buttonSearchPatients
+            // 
+            this.buttonSearchPatients.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buttonSearchPatients.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSearchPatients.Location = new System.Drawing.Point(349, 440);
+            this.buttonSearchPatients.Name = "buttonSearchPatients";
+            this.buttonSearchPatients.Size = new System.Drawing.Size(156, 49);
+            this.buttonSearchPatients.TabIndex = 26;
+            this.buttonSearchPatients.Text = "Search Patients";
+            this.buttonSearchPatients.UseVisualStyleBackColor = false;
+            this.buttonSearchPatients.Click += new System.EventHandler(this.buttonSearchPatients_Click);
+            // 
             // AppointmentScheduleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(954, 684);
+            this.Controls.Add(this.buttonSearchPatients);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.comboBoxSearchDoctor);
             this.Controls.Add(this.label3);
@@ -183,5 +197,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBoxSearchDoctor;
+        private System.Windows.Forms.Button buttonSearchPatients;
     }
 }

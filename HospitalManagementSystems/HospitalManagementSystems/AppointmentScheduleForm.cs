@@ -24,11 +24,12 @@ namespace HospitalManagementSystems
 
         HospitalDataDataContext hospitalContext = new HospitalDataDataContext();
 
-        private void buttonScheduleAppointment_Click(object sender, EventArgs e)
+        private void buttonSearchPatients_Click(object sender, EventArgs e)
         {
-            var queries = people in hospitalContext.Peoples
+            var queries = from people in hospitalContext.Peoples
                           join contactInfo in hospitalContext.ContactInfos
                           on people.AddressId equals contactInfo.AddressId
+                          where people.RoleId == 1
                           select new
                           {
                               FirstName = $"{people.FirstName}",
@@ -37,6 +38,13 @@ namespace HospitalManagementSystems
                               HomePhone = $"{contactInfo.HomePhone}",
                               MobilePhone = $"{contactInfo.MobilePhone}"
                           };
+
+            dataGridView1.DataSource = queries.ToList();
+        }
+
+        private void buttonScheduleAppointment_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
