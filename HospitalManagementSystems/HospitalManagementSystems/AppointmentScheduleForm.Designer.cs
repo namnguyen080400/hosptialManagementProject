@@ -42,6 +42,7 @@
             this.buttonSearchPatients = new System.Windows.Forms.Button();
             this.textBoxSearchCriteria = new System.Windows.Forms.TextBox();
             this.labelCriteria = new System.Windows.Forms.Label();
+            this.buttonVisit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,7 +66,7 @@
             // 
             // monthCalendarScheduleAppointment
             // 
-            this.monthCalendarScheduleAppointment.Location = new System.Drawing.Point(728, 374);
+            this.monthCalendarScheduleAppointment.Location = new System.Drawing.Point(728, 446);
             this.monthCalendarScheduleAppointment.Name = "monthCalendarScheduleAppointment";
             this.monthCalendarScheduleAppointment.TabIndex = 2;
             // 
@@ -73,7 +74,7 @@
             // 
             this.buttonScheduleAppointment.BackColor = System.Drawing.Color.LightGreen;
             this.buttonScheduleAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonScheduleAppointment.Location = new System.Drawing.Point(150, 535);
+            this.buttonScheduleAppointment.Location = new System.Drawing.Point(150, 607);
             this.buttonScheduleAppointment.Name = "buttonScheduleAppointment";
             this.buttonScheduleAppointment.Size = new System.Drawing.Size(156, 49);
             this.buttonScheduleAppointment.TabIndex = 18;
@@ -85,17 +86,18 @@
             // 
             this.buttonExit.BackColor = System.Drawing.Color.Red;
             this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExit.Location = new System.Drawing.Point(349, 535);
+            this.buttonExit.Location = new System.Drawing.Point(349, 607);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(156, 49);
             this.buttonExit.TabIndex = 19;
             this.buttonExit.Text = "Exit";
             this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // dateTimePickerDOB
             // 
             this.dateTimePickerDOB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerDOB.Location = new System.Drawing.Point(379, 374);
+            this.dateTimePickerDOB.Location = new System.Drawing.Point(379, 446);
             this.dateTimePickerDOB.Name = "dateTimePickerDOB";
             this.dateTimePickerDOB.Size = new System.Drawing.Size(270, 26);
             this.dateTimePickerDOB.TabIndex = 20;
@@ -104,7 +106,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(470, 339);
+            this.label2.Location = new System.Drawing.Point(470, 411);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 20);
             this.label2.TabIndex = 21;
@@ -114,7 +116,7 @@
             // 
             this.comboBoxSearchCriteria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxSearchCriteria.FormattingEnabled = true;
-            this.comboBoxSearchCriteria.Location = new System.Drawing.Point(129, 374);
+            this.comboBoxSearchCriteria.Location = new System.Drawing.Point(129, 446);
             this.comboBoxSearchCriteria.Name = "comboBoxSearchCriteria";
             this.comboBoxSearchCriteria.Size = new System.Drawing.Size(162, 28);
             this.comboBoxSearchCriteria.TabIndex = 22;
@@ -124,7 +126,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(160, 339);
+            this.label3.Location = new System.Drawing.Point(160, 411);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(114, 20);
             this.label3.TabIndex = 23;
@@ -134,7 +136,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(160, 415);
+            this.label4.Location = new System.Drawing.Point(160, 487);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(112, 20);
             this.label4.TabIndex = 25;
@@ -144,7 +146,7 @@
             // 
             this.comboBoxSearchDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxSearchDoctor.FormattingEnabled = true;
-            this.comboBoxSearchDoctor.Location = new System.Drawing.Point(129, 450);
+            this.comboBoxSearchDoctor.Location = new System.Drawing.Point(129, 522);
             this.comboBoxSearchDoctor.Name = "comboBoxSearchDoctor";
             this.comboBoxSearchDoctor.Size = new System.Drawing.Size(162, 28);
             this.comboBoxSearchDoctor.TabIndex = 24;
@@ -153,7 +155,7 @@
             // 
             this.buttonSearchPatients.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.buttonSearchPatients.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSearchPatients.Location = new System.Drawing.Point(545, 427);
+            this.buttonSearchPatients.Location = new System.Drawing.Point(545, 499);
             this.buttonSearchPatients.Name = "buttonSearchPatients";
             this.buttonSearchPatients.Size = new System.Drawing.Size(156, 49);
             this.buttonSearchPatients.TabIndex = 26;
@@ -164,7 +166,7 @@
             // textBoxSearchCriteria
             // 
             this.textBoxSearchCriteria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSearchCriteria.Location = new System.Drawing.Point(379, 450);
+            this.textBoxSearchCriteria.Location = new System.Drawing.Point(379, 522);
             this.textBoxSearchCriteria.Name = "textBoxSearchCriteria";
             this.textBoxSearchCriteria.Size = new System.Drawing.Size(135, 26);
             this.textBoxSearchCriteria.TabIndex = 27;
@@ -173,18 +175,31 @@
             // 
             this.labelCriteria.AutoSize = true;
             this.labelCriteria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCriteria.Location = new System.Drawing.Point(401, 415);
+            this.labelCriteria.Location = new System.Drawing.Point(401, 487);
             this.labelCriteria.Name = "labelCriteria";
             this.labelCriteria.Size = new System.Drawing.Size(88, 20);
             this.labelCriteria.TabIndex = 28;
             this.labelCriteria.Text = "All Patients";
+            // 
+            // buttonVisit
+            // 
+            this.buttonVisit.BackColor = System.Drawing.Color.Aqua;
+            this.buttonVisit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonVisit.Location = new System.Drawing.Point(358, 330);
+            this.buttonVisit.Name = "buttonVisit";
+            this.buttonVisit.Size = new System.Drawing.Size(156, 49);
+            this.buttonVisit.TabIndex = 29;
+            this.buttonVisit.Text = "Visits";
+            this.buttonVisit.UseVisualStyleBackColor = false;
+            this.buttonVisit.Click += new System.EventHandler(this.buttonVisit_Click);
             // 
             // AppointmentScheduleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(999, 656);
+            this.ClientSize = new System.Drawing.Size(999, 754);
+            this.Controls.Add(this.buttonVisit);
             this.Controls.Add(this.labelCriteria);
             this.Controls.Add(this.textBoxSearchCriteria);
             this.Controls.Add(this.buttonSearchPatients);
@@ -223,5 +238,6 @@
         private System.Windows.Forms.Button buttonSearchPatients;
         private System.Windows.Forms.TextBox textBoxSearchCriteria;
         private System.Windows.Forms.Label labelCriteria;
+        private System.Windows.Forms.Button buttonVisit;
     }
 }

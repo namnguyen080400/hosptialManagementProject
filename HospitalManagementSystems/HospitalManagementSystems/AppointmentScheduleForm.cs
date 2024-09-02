@@ -91,5 +91,19 @@ namespace HospitalManagementSystems
                 labelCriteria.Text = "Mobile Phone";
             }
         }
+
+        private void buttonVisit_Click(object sender, EventArgs e)
+        {
+            VisitForm visitForm = new VisitForm();
+            visitForm.Show();
+            this.Close();
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            HosptialMainPage hosptialMainPage = new HosptialMainPage();
+            hosptialMainPage.Show();
+            this.Close();
+        }
     }
 }
