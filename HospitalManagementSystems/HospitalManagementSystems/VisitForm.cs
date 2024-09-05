@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,19 @@ namespace HospitalManagementSystems
 
         private void buttonLoadVisit_Click(object sender, EventArgs e)
         {
+            dataGridView1.ColumnCount = 1;
+            dataGridView1.Columns[0].Name = "Office Visit";
 
+            ArrayList row = new ArrayList();
+            row.Add("9/5/2024");
+            dataGridView1.Rows.Add(row.ToArray());
+
+            DataGridViewLinkColumn link = new DataGridViewLinkColumn();
+            dataGridView1.Columns.Add(link);
+            link.HeaderText = "Link";
+            link.Name = "https://mychartwa.providence.org/mychart/Visits";
+            link.Text = "View After Visit Summary";
+            link.UseColumnTextForLinkValue = true; 
         }
 
         private void buttonExit_Click(object sender, EventArgs e)

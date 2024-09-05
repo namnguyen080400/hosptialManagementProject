@@ -60,6 +60,8 @@ namespace HospitalManagementSystems
             else
             {
                 MessageBox.Show("Incorrect username or password");
+                textBoxUsername.Clear();
+                textBoxPassword.Clear();
             }
         }
 
