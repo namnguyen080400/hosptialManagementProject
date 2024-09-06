@@ -41,5 +41,10 @@ namespace HospitalManagementSystems
             appointmentSchedule.Show();
             this.Close();
         }
+
+        public void uploadFile(string file)
+        {
+    
+        }
     }
 }
