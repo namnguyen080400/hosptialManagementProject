@@ -37,14 +37,12 @@ namespace HospitalManagementSystems
 
         private void buttonExit_Click(object sender, EventArgs e)
         {
-            AppointmentScheduleForm appointmentSchedule = new AppointmentScheduleForm();
-            appointmentSchedule.Show();
-            this.Close();
+ 
         }
 
         public void uploadFile(string file)
         {
-    
+            
         }
     }
 }

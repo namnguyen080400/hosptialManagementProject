@@ -25,5 +25,19 @@ namespace HospitalManagementSystems
             loginForm.Show();
             this.Close();
         }
+
+        private void buttonVisit_Click(object sender, EventArgs e)
+        {
+            VisitForm visitForm = new VisitForm();
+            visitForm.Show();
+            this.Close();
+        }
+
+        private void buttonScheduleAppointment_Click(object sender, EventArgs e)
+        {
+            AppointmentScheduleForm appointmentScheduleForm = new AppointmentScheduleForm();
+            appointmentScheduleForm.Show();
+            this.Close();
+        }
     }
 }

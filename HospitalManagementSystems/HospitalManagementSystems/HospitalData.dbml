@@ -67,4 +67,25 @@
       <Column Name="Ethnicity" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.UpcomingVisit" Member="UpcomingVisits">
+    <Type Name="UpcomingVisit">
+      <Column Name="UpcomingVisitId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PatientId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UpcomingVisitDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="VisitType" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="DoctorName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="VisitLocation" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PastVisit" Member="PastVisits">
+    <Type Name="PastVisit">
+      <Column Name="PastVisitId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PatientId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PastVisitDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="VisitType" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="DoctorName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="VisitLocation" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="VisitSummary" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
 </Database>

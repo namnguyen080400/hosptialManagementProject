@@ -50,5 +50,17 @@
         <elementListCompartment Id="477fbcbe-71ff-494f-9e38-18f68216061d" absoluteBounds="3.015, 6.835, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="60a2b154-8bb4-4bfd-8f7b-cbdb9639e7f6" absoluteBounds="1.375, 3.25, 2, 1.9631982421875">
+      <DataClassMoniker Name="/HospitalDataDataContext/UpcomingVisit" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f452516a-1f56-4e2c-b125-df6745a9c09a" absoluteBounds="1.3900000000000001, 3.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="88fbd511-57aa-4b2b-93bb-ebd012e58a70" absoluteBounds="1.25, 0.625, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/HospitalDataDataContext/PastVisit" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4d8ab92e-0301-4fdb-8e81-70bf84923403" absoluteBounds="1.2650000000000001, 1.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

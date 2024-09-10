@@ -54,6 +54,12 @@ namespace HospitalManagementSystems
     partial void InsertPeople(People instance);
     partial void UpdatePeople(People instance);
     partial void DeletePeople(People instance);
+    partial void InsertUpcomingVisit(UpcomingVisit instance);
+    partial void UpdateUpcomingVisit(UpcomingVisit instance);
+    partial void DeleteUpcomingVisit(UpcomingVisit instance);
+    partial void InsertPastVisit(PastVisit instance);
+    partial void UpdatePastVisit(PastVisit instance);
+    partial void DeletePastVisit(PastVisit instance);
     #endregion
 		
 		public HospitalDataDataContext() : 
@@ -147,6 +153,22 @@ namespace HospitalManagementSystems
 			get
 			{
 				return this.GetTable<People>();
+			}
+		}
+		
+		public System.Data.Linq.Table<UpcomingVisit> UpcomingVisits
+		{
+			get
+			{
+				return this.GetTable<UpcomingVisit>();
+			}
+		}
+		
+		public System.Data.Linq.Table<PastVisit> PastVisits
+		{
+			get
+			{
+				return this.GetTable<PastVisit>();
 			}
 		}
 	}
@@ -1270,6 +1292,394 @@ namespace HospitalManagementSystems
 					this._Ethnicity = value;
 					this.SendPropertyChanged("Ethnicity");
 					this.OnEthnicityChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.UpcomingVisit")]
+	public partial class UpcomingVisit : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _UpcomingVisitId;
+		
+		private System.Nullable<int> _PatientId;
+		
+		private System.Nullable<System.DateTime> _UpcomingVisitDate;
+		
+		private string _VisitType;
+		
+		private string _DoctorName;
+		
+		private string _VisitLocation;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnUpcomingVisitIdChanging(int value);
+    partial void OnUpcomingVisitIdChanged();
+    partial void OnPatientIdChanging(System.Nullable<int> value);
+    partial void OnPatientIdChanged();
+    partial void OnUpcomingVisitDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnUpcomingVisitDateChanged();
+    partial void OnVisitTypeChanging(string value);
+    partial void OnVisitTypeChanged();
+    partial void OnDoctorNameChanging(string value);
+    partial void OnDoctorNameChanged();
+    partial void OnVisitLocationChanging(string value);
+    partial void OnVisitLocationChanged();
+    #endregion
+		
+		public UpcomingVisit()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UpcomingVisitId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int UpcomingVisitId
+		{
+			get
+			{
+				return this._UpcomingVisitId;
+			}
+			set
+			{
+				if ((this._UpcomingVisitId != value))
+				{
+					this.OnUpcomingVisitIdChanging(value);
+					this.SendPropertyChanging();
+					this._UpcomingVisitId = value;
+					this.SendPropertyChanged("UpcomingVisitId");
+					this.OnUpcomingVisitIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PatientId", DbType="Int")]
+		public System.Nullable<int> PatientId
+		{
+			get
+			{
+				return this._PatientId;
+			}
+			set
+			{
+				if ((this._PatientId != value))
+				{
+					this.OnPatientIdChanging(value);
+					this.SendPropertyChanging();
+					this._PatientId = value;
+					this.SendPropertyChanged("PatientId");
+					this.OnPatientIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UpcomingVisitDate", DbType="Date")]
+		public System.Nullable<System.DateTime> UpcomingVisitDate
+		{
+			get
+			{
+				return this._UpcomingVisitDate;
+			}
+			set
+			{
+				if ((this._UpcomingVisitDate != value))
+				{
+					this.OnUpcomingVisitDateChanging(value);
+					this.SendPropertyChanging();
+					this._UpcomingVisitDate = value;
+					this.SendPropertyChanged("UpcomingVisitDate");
+					this.OnUpcomingVisitDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VisitType", DbType="NVarChar(500)")]
+		public string VisitType
+		{
+			get
+			{
+				return this._VisitType;
+			}
+			set
+			{
+				if ((this._VisitType != value))
+				{
+					this.OnVisitTypeChanging(value);
+					this.SendPropertyChanging();
+					this._VisitType = value;
+					this.SendPropertyChanged("VisitType");
+					this.OnVisitTypeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DoctorName", DbType="NVarChar(500)")]
+		public string DoctorName
+		{
+			get
+			{
+				return this._DoctorName;
+			}
+			set
+			{
+				if ((this._DoctorName != value))
+				{
+					this.OnDoctorNameChanging(value);
+					this.SendPropertyChanging();
+					this._DoctorName = value;
+					this.SendPropertyChanged("DoctorName");
+					this.OnDoctorNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VisitLocation", DbType="NVarChar(500)")]
+		public string VisitLocation
+		{
+			get
+			{
+				return this._VisitLocation;
+			}
+			set
+			{
+				if ((this._VisitLocation != value))
+				{
+					this.OnVisitLocationChanging(value);
+					this.SendPropertyChanging();
+					this._VisitLocation = value;
+					this.SendPropertyChanged("VisitLocation");
+					this.OnVisitLocationChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.PastVisit")]
+	public partial class PastVisit : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _PastVisitId;
+		
+		private System.Nullable<int> _PatientId;
+		
+		private System.Nullable<System.DateTime> _PastVisitDate;
+		
+		private string _VisitType;
+		
+		private string _DoctorName;
+		
+		private string _VisitLocation;
+		
+		private string _VisitSummary;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnPastVisitIdChanging(int value);
+    partial void OnPastVisitIdChanged();
+    partial void OnPatientIdChanging(System.Nullable<int> value);
+    partial void OnPatientIdChanged();
+    partial void OnPastVisitDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnPastVisitDateChanged();
+    partial void OnVisitTypeChanging(string value);
+    partial void OnVisitTypeChanged();
+    partial void OnDoctorNameChanging(string value);
+    partial void OnDoctorNameChanged();
+    partial void OnVisitLocationChanging(string value);
+    partial void OnVisitLocationChanged();
+    partial void OnVisitSummaryChanging(string value);
+    partial void OnVisitSummaryChanged();
+    #endregion
+		
+		public PastVisit()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PastVisitId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int PastVisitId
+		{
+			get
+			{
+				return this._PastVisitId;
+			}
+			set
+			{
+				if ((this._PastVisitId != value))
+				{
+					this.OnPastVisitIdChanging(value);
+					this.SendPropertyChanging();
+					this._PastVisitId = value;
+					this.SendPropertyChanged("PastVisitId");
+					this.OnPastVisitIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PatientId", DbType="Int")]
+		public System.Nullable<int> PatientId
+		{
+			get
+			{
+				return this._PatientId;
+			}
+			set
+			{
+				if ((this._PatientId != value))
+				{
+					this.OnPatientIdChanging(value);
+					this.SendPropertyChanging();
+					this._PatientId = value;
+					this.SendPropertyChanged("PatientId");
+					this.OnPatientIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PastVisitDate", DbType="Date")]
+		public System.Nullable<System.DateTime> PastVisitDate
+		{
+			get
+			{
+				return this._PastVisitDate;
+			}
+			set
+			{
+				if ((this._PastVisitDate != value))
+				{
+					this.OnPastVisitDateChanging(value);
+					this.SendPropertyChanging();
+					this._PastVisitDate = value;
+					this.SendPropertyChanged("PastVisitDate");
+					this.OnPastVisitDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VisitType", DbType="NVarChar(500)")]
+		public string VisitType
+		{
+			get
+			{
+				return this._VisitType;
+			}
+			set
+			{
+				if ((this._VisitType != value))
+				{
+					this.OnVisitTypeChanging(value);
+					this.SendPropertyChanging();
+					this._VisitType = value;
+					this.SendPropertyChanged("VisitType");
+					this.OnVisitTypeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DoctorName", DbType="NVarChar(500)")]
+		public string DoctorName
+		{
+			get
+			{
+				return this._DoctorName;
+			}
+			set
+			{
+				if ((this._DoctorName != value))
+				{
+					this.OnDoctorNameChanging(value);
+					this.SendPropertyChanging();
+					this._DoctorName = value;
+					this.SendPropertyChanged("DoctorName");
+					this.OnDoctorNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VisitLocation", DbType="NVarChar(500)")]
+		public string VisitLocation
+		{
+			get
+			{
+				return this._VisitLocation;
+			}
+			set
+			{
+				if ((this._VisitLocation != value))
+				{
+					this.OnVisitLocationChanging(value);
+					this.SendPropertyChanging();
+					this._VisitLocation = value;
+					this.SendPropertyChanged("VisitLocation");
+					this.OnVisitLocationChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VisitSummary", DbType="NVarChar(500)")]
+		public string VisitSummary
+		{
+			get
+			{
+				return this._VisitSummary;
+			}
+			set
+			{
+				if ((this._VisitSummary != value))
+				{
+					this.OnVisitSummaryChanging(value);
+					this.SendPropertyChanging();
+					this._VisitSummary = value;
+					this.SendPropertyChanged("VisitSummary");
+					this.OnVisitSummaryChanged();
 				}
 			}
 		}
