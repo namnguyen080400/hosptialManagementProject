@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,7 +17,8 @@ namespace HospitalManagementSystems
         public AppointmentScheduleForm()
         {
             InitializeComponent();
-
+            loadUpcomingVisit();
+            loadPastVisit();
 
             var queriesDoctor = from people in hospitalContext.Peoples
                           where people.RoleId == 2
@@ -36,6 +38,35 @@ namespace HospitalManagementSystems
         }
 
         HospitalDataDataContext hospitalContext = new HospitalDataDataContext();
+        
+        private void loadUpcomingVisit()
+        {
+            var upcomingVisit = from currentVisit in hospitalContext.UpcomingVisits                    
+                                select new
+                                {
+                                    PatientId = $"{currentVisit.PatientId}",
+                                    UpcomingVisitDate = $"{currentVisit.UpcomingVisitDate}",
+                                    VisitType = $"{currentVisit.VisitType}",
+                                    DoctorName = $"{currentVisit.DoctorName}",
+                                    VisitLocation = $"{currentVisit.VisitLocation}"
+                                };
+            dataGridViewUpcomingVisit.DataSource = upcomingVisit.ToList();
+        }
+
+        private void loadPastVisit()
+        {
+            var afterVisit = from pastVisit in hospitalContext.PastVisits
+                                select new
+                                {
+                                    PatientId = $"{pastVisit.PatientId}",
+                                    UpcomingVisitDate = $"{pastVisit.PastVisitDate}",
+                                    VisitType = $"{pastVisit.VisitType}",
+                                    DoctorName = $"{pastVisit.DoctorName}",
+                                    VisitLocation = $"{pastVisit.VisitLocation}",
+                                    VisitSummary = $"{pastVisit.VisitSummary}"
+                                };
+            dataGridViewPastVisit.DataSource = afterVisit.ToList();
+        }
         
         private void buttonScheduleAppointment_Click(object sender, EventArgs e)
         {
