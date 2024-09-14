@@ -35,6 +35,10 @@ namespace HospitalManagementSystems
             }
             comboBoxSearchDoctor.DataSource = doctors;
             comboBoxSearchDoctor.SelectedIndex = 0;
+
+            string[] visitType = { "Select Visit", "Annual physical", "Non-urgent problem", 
+                                "Follow up", "Screening", "Diagnostic", "Psychiatric" };
+            comboBoxVisitType.DataSource = visitType;
         }
 
         HospitalDataDataContext hospitalContext = new HospitalDataDataContext();
@@ -55,7 +59,7 @@ namespace HospitalManagementSystems
 
         private void loadPastVisit()
         {
-            var afterVisit = from pastVisit in hospitalContext.PastVisits
+           var afterVisit = from pastVisit in hospitalContext.PastVisits
                                 select new
                                 {
                                     PatientId = $"{pastVisit.PatientId}",
@@ -65,12 +69,29 @@ namespace HospitalManagementSystems
                                     VisitLocation = $"{pastVisit.VisitLocation}",
                                     VisitSummary = $"{pastVisit.VisitSummary}"
                                 };
-            dataGridViewPastVisit.DataSource = afterVisit.ToList();
+           dataGridViewPastVisit.DataSource = afterVisit.ToList();
         }
         
         private void buttonScheduleAppointment_Click(object sender, EventArgs e)
         {
-           
+            string selectDoctor = comboBoxSearchDoctor.SelectedValue.ToString();
+            DateTime appointmentDate = monthCalendarScheduleAppointment.SelectionStart;
+
+            var getLoginId = from loginId in hospitalContext.Logins
+                             join people in hospitalContext.Peoples
+                             on loginId.LoginId equals people.LoginId
+                             select new
+                             {
+                                 LoginId = $"{loginId.LoginId}",
+                                 Username = $"{loginId.Username}",
+                                 Firstname = $"{people.FirstName}",
+                                 Lastname = $"{people.LastName}",
+                                 DateOfBirth = $"{people.DateOfBirth}",
+                                 Gender = $"{people.Gender}",
+                                 Ethnicity = $"{people.Ethnicity}"
+                             };
+    
+
         }
 
         private void buttonExit_Click(object sender, EventArgs e)

@@ -46,6 +46,7 @@ namespace HospitalManagementSystems
                 if (queries.ToList()[0].roleId == PATIENT_ROLEID)
                 {
                     PatientHomepageForm patientPage = new PatientHomepageForm(queries.ToList()[0].loginId);
+                    //Program.patientMainForm.Text = "Patient: " + username;
                     patientPage.Show(); 
                     this.Hide();
                 }

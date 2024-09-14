@@ -39,6 +39,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.comboBoxVisitType = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUpcomingVisit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPastVisit)).BeginInit();
             this.SuspendLayout();
@@ -71,7 +73,7 @@
             // 
             this.buttonScheduleAppointment.BackColor = System.Drawing.Color.LightGreen;
             this.buttonScheduleAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonScheduleAppointment.Location = new System.Drawing.Point(250, 698);
+            this.buttonScheduleAppointment.Location = new System.Drawing.Point(463, 698);
             this.buttonScheduleAppointment.Name = "buttonScheduleAppointment";
             this.buttonScheduleAppointment.Size = new System.Drawing.Size(156, 49);
             this.buttonScheduleAppointment.TabIndex = 18;
@@ -83,7 +85,7 @@
             // 
             this.buttonExit.BackColor = System.Drawing.Color.Red;
             this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExit.Location = new System.Drawing.Point(489, 698);
+            this.buttonExit.Location = new System.Drawing.Point(341, 864);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(156, 49);
             this.buttonExit.TabIndex = 19;
@@ -95,7 +97,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(54, 664);
+            this.label4.Location = new System.Drawing.Point(300, 664);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(112, 20);
             this.label4.TabIndex = 25;
@@ -105,7 +107,7 @@
             // 
             this.comboBoxSearchDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxSearchDoctor.FormattingEnabled = true;
-            this.comboBoxSearchDoctor.Location = new System.Drawing.Point(58, 698);
+            this.comboBoxSearchDoctor.Location = new System.Drawing.Point(271, 698);
             this.comboBoxSearchDoctor.Name = "comboBoxSearchDoctor";
             this.comboBoxSearchDoctor.Size = new System.Drawing.Size(162, 28);
             this.comboBoxSearchDoctor.TabIndex = 24;
@@ -148,12 +150,33 @@
             this.label5.TabIndex = 29;
             this.label5.Text = "Appointment Date";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(114, 664);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(77, 20);
+            this.label6.TabIndex = 31;
+            this.label6.Text = "Visit Type";
+            // 
+            // comboBoxVisitType
+            // 
+            this.comboBoxVisitType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxVisitType.FormattingEnabled = true;
+            this.comboBoxVisitType.Location = new System.Drawing.Point(69, 698);
+            this.comboBoxVisitType.Name = "comboBoxVisitType";
+            this.comboBoxVisitType.Size = new System.Drawing.Size(162, 28);
+            this.comboBoxVisitType.TabIndex = 30;
+            // 
             // AppointmentScheduleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1079, 936);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.comboBoxVisitType);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -187,5 +210,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox comboBoxVisitType;
     }
 }
