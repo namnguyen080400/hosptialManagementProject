@@ -150,27 +150,27 @@ namespace HospitalManagementSystems
                     hospitalContext.ContactInfos.InsertOnSubmit(newContact);
                     hospitalContext.SubmitChanges();
 
-                    // add new patient to database
-                    Patient newPatient = new Patient
-                    {
-                        LoginId = newLogin.LoginId,
-                        PrimaryDoctor = primaryDoctor
-                    };
-                    hospitalContext.Patients.InsertOnSubmit(newPatient);
-                    hospitalContext.SubmitChanges();
-
                     // check if doctor is selected from combobox
                     if (comboBoxUserType.SelectedIndex == 2)
                     {
                         // add new doctor to database
                         Doctor newDoctor = new Doctor
                         {
-                            UserId = newPeople.UserId,
+                            LoginId = newPeople.LoginId,
                             Expertise = comboBoxExpertise.SelectedValue.ToString()
                         };
                         hospitalContext.Doctors.InsertOnSubmit(newDoctor);
                         hospitalContext.SubmitChanges();
                     }
+
+                    // add new patient to database
+                    Patient newPatient = new Patient
+                    {
+                        LoginId = newLogin.LoginId,
+                        DoctorId = newDoctor.DoctorId
+                    };
+                    hospitalContext.Patients.InsertOnSubmit(newPatient);
+                    hospitalContext.SubmitChanges();
                     MessageBox.Show("Sign up sucessful");
                 }
             }

@@ -458,9 +458,9 @@
             this.labelPrimaryDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPrimaryDoctor.Location = new System.Drawing.Point(95, 876);
             this.labelPrimaryDoctor.Name = "labelPrimaryDoctor";
-            this.labelPrimaryDoctor.Size = new System.Drawing.Size(113, 20);
+            this.labelPrimaryDoctor.Size = new System.Drawing.Size(119, 20);
             this.labelPrimaryDoctor.TabIndex = 38;
-            this.labelPrimaryDoctor.Text = "Primary Doctor";
+            this.labelPrimaryDoctor.Text = "*Primary Doctor";
             // 
             // comboBoxGender
             // 

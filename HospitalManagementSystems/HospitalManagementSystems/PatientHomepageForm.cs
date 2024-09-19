@@ -13,6 +13,7 @@ namespace HospitalManagementSystems
     public partial class PatientHomepageForm : Form
     {
         int loginId;
+        HospitalDataDataContext hospitalContext = new HospitalDataDataContext();
         public PatientHomepageForm(int loginId)
         {
             InitializeComponent();
@@ -35,6 +36,17 @@ namespace HospitalManagementSystems
 
         private void buttonScheduleAppointment_Click(object sender, EventArgs e)
         {
+            var queriesPatientDoctorId = from people in hospitalContext.Peoples
+                                         join doctor in hospitalContext.Doctors
+                                         on people.UserId equals doctor.UserId
+                                         join login in hospitalContext.Logins
+                                         on 
+                                         
+
+                                select new
+                                {
+                    
+                                };
             AppointmentScheduleForm appointmentScheduleForm = new AppointmentScheduleForm();
             appointmentScheduleForm.Show();
             this.Close();

@@ -30,7 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewUpcomingVisit = new System.Windows.Forms.DataGridView();
-            this.monthCalendarScheduleAppointment = new System.Windows.Forms.MonthCalendar();
+            this.monthCalendarUpcomingVisitDate = new System.Windows.Forms.MonthCalendar();
             this.buttonScheduleAppointment = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -63,11 +63,11 @@
             this.dataGridViewUpcomingVisit.Size = new System.Drawing.Size(908, 216);
             this.dataGridViewUpcomingVisit.TabIndex = 1;
             // 
-            // monthCalendarScheduleAppointment
+            // monthCalendarUpcomingVisitDate
             // 
-            this.monthCalendarScheduleAppointment.Location = new System.Drawing.Point(737, 698);
-            this.monthCalendarScheduleAppointment.Name = "monthCalendarScheduleAppointment";
-            this.monthCalendarScheduleAppointment.TabIndex = 2;
+            this.monthCalendarUpcomingVisitDate.Location = new System.Drawing.Point(737, 698);
+            this.monthCalendarUpcomingVisitDate.Name = "monthCalendarUpcomingVisitDate";
+            this.monthCalendarUpcomingVisitDate.TabIndex = 2;
             // 
             // buttonScheduleAppointment
             // 
@@ -185,7 +185,7 @@
             this.Controls.Add(this.comboBoxSearchDoctor);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonScheduleAppointment);
-            this.Controls.Add(this.monthCalendarScheduleAppointment);
+            this.Controls.Add(this.monthCalendarUpcomingVisitDate);
             this.Controls.Add(this.dataGridViewUpcomingVisit);
             this.Controls.Add(this.label1);
             this.Name = "AppointmentScheduleForm";
@@ -201,7 +201,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridViewUpcomingVisit;
-        private System.Windows.Forms.MonthCalendar monthCalendarScheduleAppointment;
+        private System.Windows.Forms.MonthCalendar monthCalendarUpcomingVisitDate;
         private System.Windows.Forms.Button buttonScheduleAppointment;
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Label label4;

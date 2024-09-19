@@ -14,7 +14,9 @@ namespace HospitalManagementSystems
 {
     public partial class AppointmentScheduleForm : Form
     {
-        public AppointmentScheduleForm()
+        int patientId;
+        int doctorId;
+        public AppointmentScheduleForm(int patientId, int doctorId)
         {
             InitializeComponent();
             loadUpcomingVisit();
@@ -75,14 +77,20 @@ namespace HospitalManagementSystems
         private void buttonScheduleAppointment_Click(object sender, EventArgs e)
         {
             string selectDoctor = comboBoxSearchDoctor.SelectedValue.ToString();
-            DateTime appointmentDate = monthCalendarScheduleAppointment.SelectionStart;
+            DateTime appointmentDate = monthCalendarUpcomingVisitDate.SelectionStart;
 
-            var getLoginId = from loginId in hospitalContext.Logins
+            var getAllInfo = from loginId in hospitalContext.Logins
                              join people in hospitalContext.Peoples
                              on loginId.LoginId equals people.LoginId
+                             join patient in hospitalContext.Patients
+                             on loginId.LoginId equals patient.LoginId
+                             join address in hospitalContext.AddressNames
+                             on people.AddressId equals address.AddressId
+                             join doctor in hospitalContext.Doctors
+                             on people.UserId equals doctor.UserId
                              select new
                              {
-                                 LoginId = $"{loginId.LoginId}",
+                                 PatientId = $"{patient.PatientId}",
                                  Username = $"{loginId.Username}",
                                  Firstname = $"{people.FirstName}",
                                  Lastname = $"{people.LastName}",
@@ -90,7 +98,15 @@ namespace HospitalManagementSystems
                                  Gender = $"{people.Gender}",
                                  Ethnicity = $"{people.Ethnicity}"
                              };
-    
+
+
+            var upcomingAppointment = new UpcomingVisit
+            {
+                UpcomingVisitDate = monthCalendarUpcomingVisitDate.SelectionStart,
+                VisitType = comboBoxVisitType.SelectedValue.ToString(),
+                DoctorName = comboBoxSearchDoctor.SelectedValue.ToString(),
+
+            };
 
         }
 
