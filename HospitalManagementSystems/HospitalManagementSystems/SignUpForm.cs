@@ -48,8 +48,36 @@ namespace HospitalManagementSystems
             comboBoxExpertise.Visible = false;
             labelExpertise.Visible = false;
 
-            labelPrimaryDoctor.Visible = false;
-            textBoxPrimaryDoctor.Visible = false;
+            if (comboBoxUserType.Text == "Patient")
+            {
+                labelPrimaryDoctor.Visible = true;
+                comboBoxPrimaryDoctor.Visible = true;
+            }
+            else
+            {
+                labelPrimaryDoctor.Visible = false;
+                comboBoxPrimaryDoctor.Visible = false;
+            }
+
+            var queriesPrimaryDoctor = from login in hospitalContext.Logins
+                                       join people in hospitalContext.Peoples
+                                       on login.LoginId equals people.LoginId
+                                       join doctor in hospitalContext.Doctors
+                                       on login.LoginId equals doctor.LoginId
+                                       where doctor.Expertise == "Primary care physician"
+                                       select new
+                                       {
+                                           Firstname = $"{people.FirstName}",
+                                           Lastname = $"{people.LastName}"
+                                       };
+            List<string> primaryDoctor = new List<string>();
+            primaryDoctor.Add("Select primary doctor");
+            foreach (var doctor in queriesPrimaryDoctor)
+            {
+                primaryDoctor.Add(doctor.Firstname + " " + doctor.Lastname);
+            }
+            comboBoxPrimaryDoctor.DataSource = primaryDoctor;
+            comboBoxPrimaryDoctor.SelectedIndex = 0;
         }
 
         HospitalDataDataContext hospitalContext = new HospitalDataDataContext();
@@ -73,7 +101,7 @@ namespace HospitalManagementSystems
             string city = textBoxCity.Text;
             string state = comboBoxStateName.SelectedValue.ToString();
             string zipCode = textBoxZipCode.Text;
-            string primaryDoctor = textBoxPrimaryDoctor.Text;
+
 
             if (comboBoxEthnicity.SelectedIndex == 0)
             {
@@ -83,10 +111,10 @@ namespace HospitalManagementSystems
             {
                 homePhone = null;
             }
-            if (textBoxPrimaryDoctor.Text == "")
-            {
-                primaryDoctor = null;
-            }
+            //if (textBoxPrimaryDoctor.Text == "")
+            //{
+            //    primaryDoctor = null;
+            //}
 
             if (checkRegistrationValidty()) // user entered all the fields
             {
@@ -163,14 +191,42 @@ namespace HospitalManagementSystems
                         hospitalContext.SubmitChanges();
                     }
 
-                    // add new patient to database
-                    Patient newPatient = new Patient
+                    if (comboBoxUserType.SelectedIndex == 1)
                     {
-                        LoginId = newLogin.LoginId,
-                        DoctorId = newDoctor.DoctorId
-                    };
-                    hospitalContext.Patients.InsertOnSubmit(newPatient);
-                    hospitalContext.SubmitChanges();
+                        string[] doctorName = comboBoxPrimaryDoctor.SelectedValue.ToString().Split(' ');
+
+                        var queriesDoctor = from login in hospitalContext.Logins
+                                            join people in hospitalContext.Peoples
+                                            on login.LoginId equals people.LoginId
+                                            join doctor in hospitalContext.Doctors
+                                            on login.LoginId equals doctor.LoginId
+                                            where doctorName[0] == people.FirstName
+                                            && doctorName[1] == people.LastName
+                                            select new
+                                            {
+                                                DoctorId = $"{doctor.DoctorId}",
+                                                FirstName = $"{people.FirstName}",
+                                                LastName = $"{people.LastName}"
+                                            };
+                        if (queriesDoctor.ToList().Count() > 0)
+                        {
+                            // add new patient to database
+                            Patient newPatient = new Patient
+                            {
+                                LoginId = newLogin.LoginId,
+                                DoctorId = Int32.Parse(queriesDoctor.ToList()[0].DoctorId)
+                            };
+                            hospitalContext.Patients.InsertOnSubmit(newPatient);
+                            hospitalContext.SubmitChanges();
+                        }
+                        else
+                        {
+                            MessageBox.Show("STOP TO DEBUG. CANNOT FIND DOCTOR!!!!");
+                        }
+
+                    }
+
+
                     MessageBox.Show("Sign up sucessful");
                 }
             }
@@ -259,6 +315,14 @@ namespace HospitalManagementSystems
                     return false;
                 }
             }
+            if (comboBoxUserType.SelectedIndex == 1)
+            {
+                if (comboBoxPrimaryDoctor.SelectedIndex == 0)
+                {
+                    MessageBox.Show("Please select your Primary care physician");
+                    return false;
+                }
+            }
             return result;
         }
 
@@ -278,7 +342,7 @@ namespace HospitalManagementSystems
             textBoxStreet.Clear();
             textBoxCity.Clear();
             textBoxZipCode.Clear();
-            textBoxPrimaryDoctor.Clear();
+            comboBoxPrimaryDoctor.SelectedIndex = 0;
             comboBoxEthnicity.SelectedIndex = 0;
             comboBoxGender.SelectedIndex = 0;
             comboBoxUserType.SelectedIndex = 0;
@@ -306,13 +370,13 @@ namespace HospitalManagementSystems
 
                 // hide primary doctor label and textbox
                 labelPrimaryDoctor.Visible = false;
-                textBoxPrimaryDoctor.Visible = false;
+                comboBoxPrimaryDoctor.Visible = false;
             }
             else if (comboBoxUserType.SelectedIndex == 1) // patient
             {
                 // display primary doctor label and textbox
                 labelPrimaryDoctor.Visible = true;
-                textBoxPrimaryDoctor.Visible = true;
+                comboBoxPrimaryDoctor.Visible = true;
 
                 // hide expertise label and combobox
                 comboBoxExpertise.Visible = false;
@@ -325,7 +389,7 @@ namespace HospitalManagementSystems
                 labelExpertise.Visible = false;
 
                 labelPrimaryDoctor.Visible = false;
-                textBoxPrimaryDoctor.Visible = false;
+                comboBoxPrimaryDoctor.Visible = false;
             }
             else if (comboBoxUserType.SelectedIndex >= 3) // nurse and staff
             {
@@ -334,7 +398,7 @@ namespace HospitalManagementSystems
                 labelExpertise.Visible = false;
 
                 labelPrimaryDoctor.Visible = false;
-                textBoxPrimaryDoctor.Visible = false;
+                comboBoxPrimaryDoctor.Visible = false;
             }
         }
     }

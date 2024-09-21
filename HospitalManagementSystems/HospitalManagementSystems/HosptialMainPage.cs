@@ -26,8 +26,8 @@ namespace HospitalManagementSystems
 
         private void buttonAppointmentScheduling_Click(object sender, EventArgs e)
         {
-            AppointmentScheduleForm scheduleForm = new AppointmentScheduleForm();
-            scheduleForm.Show();
+            //AppointmentScheduleForm scheduleForm = new AppointmentScheduleForm();
+            //scheduleForm.Show();
             this.Hide();
         }
     }

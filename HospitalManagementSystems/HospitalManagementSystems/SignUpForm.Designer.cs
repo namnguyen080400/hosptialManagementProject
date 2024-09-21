@@ -66,11 +66,11 @@
             this.buttonExit = new System.Windows.Forms.Button();
             this.labelExpertise = new System.Windows.Forms.Label();
             this.comboBoxExpertise = new System.Windows.Forms.ComboBox();
-            this.textBoxPrimaryDoctor = new System.Windows.Forms.TextBox();
             this.labelPrimaryDoctor = new System.Windows.Forms.Label();
             this.comboBoxGender = new System.Windows.Forms.ComboBox();
             this.comboBoxEthnicity = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
+            this.comboBoxPrimaryDoctor = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -444,14 +444,6 @@
             this.comboBoxExpertise.Size = new System.Drawing.Size(162, 28);
             this.comboBoxExpertise.TabIndex = 37;
             // 
-            // textBoxPrimaryDoctor
-            // 
-            this.textBoxPrimaryDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPrimaryDoctor.Location = new System.Drawing.Point(223, 876);
-            this.textBoxPrimaryDoctor.Name = "textBoxPrimaryDoctor";
-            this.textBoxPrimaryDoctor.Size = new System.Drawing.Size(162, 26);
-            this.textBoxPrimaryDoctor.TabIndex = 27;
-            // 
             // labelPrimaryDoctor
             // 
             this.labelPrimaryDoctor.AutoSize = true;
@@ -490,17 +482,26 @@
             this.label18.TabIndex = 41;
             this.label18.Text = "Ethnicity";
             // 
+            // comboBoxPrimaryDoctor
+            // 
+            this.comboBoxPrimaryDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxPrimaryDoctor.FormattingEnabled = true;
+            this.comboBoxPrimaryDoctor.Location = new System.Drawing.Point(223, 876);
+            this.comboBoxPrimaryDoctor.Name = "comboBoxPrimaryDoctor";
+            this.comboBoxPrimaryDoctor.Size = new System.Drawing.Size(162, 28);
+            this.comboBoxPrimaryDoctor.TabIndex = 42;
+            // 
             // SignUpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(800, 977);
+            this.Controls.Add(this.comboBoxPrimaryDoctor);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.comboBoxEthnicity);
             this.Controls.Add(this.comboBoxGender);
             this.Controls.Add(this.labelPrimaryDoctor);
-            this.Controls.Add(this.textBoxPrimaryDoctor);
             this.Controls.Add(this.comboBoxExpertise);
             this.Controls.Add(this.labelExpertise);
             this.Controls.Add(this.buttonExit);
@@ -572,11 +573,11 @@
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Label labelExpertise;
         private System.Windows.Forms.ComboBox comboBoxExpertise;
-        private System.Windows.Forms.TextBox textBoxPrimaryDoctor;
         private System.Windows.Forms.Label labelPrimaryDoctor;
         private System.Windows.Forms.ComboBox comboBoxGender;
         private System.Windows.Forms.ComboBox comboBoxStateName;
         private System.Windows.Forms.ComboBox comboBoxEthnicity;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.ComboBox comboBoxPrimaryDoctor;
     }
 }

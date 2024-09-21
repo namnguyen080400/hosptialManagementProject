@@ -3,32 +3,28 @@
   "WorkspaceRootPath": "C:\\tmp\\SummerProject\\hosptialManagementProject\\HospitalManagementSystems\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BB6C2011-ADAF-4452-BCB0-644288C17AB8}|HospitalManagementSystems\\HospitalManagementSystems.csproj|C:\\tmp\\SummerProject\\hosptialManagementProject\\HospitalManagementSystems\\HospitalManagementSystems\\SignUpForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB6C2011-ADAF-4452-BCB0-644288C17AB8}|HospitalManagementSystems\\HospitalManagementSystems.csproj|solutionrelative:HospitalManagementSystems\\SignUpForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BB6C2011-ADAF-4452-BCB0-644288C17AB8}|HospitalManagementSystems\\HospitalManagementSystems.csproj|C:\\tmp\\SummerProject\\hosptialManagementProject\\HospitalManagementSystems\\HospitalManagementSystems\\AppointmentScheduleForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB6C2011-ADAF-4452-BCB0-644288C17AB8}|HospitalManagementSystems\\HospitalManagementSystems.csproj|solutionrelative:HospitalManagementSystems\\AppointmentScheduleForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB6C2011-ADAF-4452-BCB0-644288C17AB8}|HospitalManagementSystems\\HospitalManagementSystems.csproj|C:\\tmp\\SummerProject\\hosptialManagementProject\\HospitalManagementSystems\\hospitalmanagementsystems\\signupform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BB6C2011-ADAF-4452-BCB0-644288C17AB8}|HospitalManagementSystems\\HospitalManagementSystems.csproj|solutionrelative:hospitalmanagementsystems\\signupform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{BB6C2011-ADAF-4452-BCB0-644288C17AB8}|HospitalManagementSystems\\HospitalManagementSystems.csproj|C:\\tmp\\SummerProject\\hosptialManagementProject\\HospitalManagementSystems\\hospitalmanagementsystems\\appointmentscheduleform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BB6C2011-ADAF-4452-BCB0-644288C17AB8}|HospitalManagementSystems\\HospitalManagementSystems.csproj|solutionrelative:hospitalmanagementsystems\\appointmentscheduleform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BB6C2011-ADAF-4452-BCB0-644288C17AB8}|HospitalManagementSystems\\HospitalManagementSystems.csproj|C:\\tmp\\SummerProject\\hosptialManagementProject\\HospitalManagementSystems\\HospitalManagementSystems\\PatientHomepageForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BB6C2011-ADAF-4452-BCB0-644288C17AB8}|HospitalManagementSystems\\HospitalManagementSystems.csproj|solutionrelative:HospitalManagementSystems\\PatientHomepageForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB6C2011-ADAF-4452-BCB0-644288C17AB8}|HospitalManagementSystems\\HospitalManagementSystems.csproj|C:\\tmp\\SummerProject\\hosptialManagementProject\\HospitalManagementSystems\\HospitalManagementSystems\\AppointmentScheduleForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB6C2011-ADAF-4452-BCB0-644288C17AB8}|HospitalManagementSystems\\HospitalManagementSystems.csproj|solutionrelative:HospitalManagementSystems\\AppointmentScheduleForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BB6C2011-ADAF-4452-BCB0-644288C17AB8}|HospitalManagementSystems\\HospitalManagementSystems.csproj|C:\\tmp\\SummerProject\\hosptialManagementProject\\HospitalManagementSystems\\HospitalManagementSystems\\HosptialMainPage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB6C2011-ADAF-4452-BCB0-644288C17AB8}|HospitalManagementSystems\\HospitalManagementSystems.csproj|solutionrelative:HospitalManagementSystems\\HosptialMainPage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB6C2011-ADAF-4452-BCB0-644288C17AB8}|HospitalManagementSystems\\HospitalManagementSystems.csproj|C:\\tmp\\SummerProject\\hosptialManagementProject\\HospitalManagementSystems\\HospitalManagementSystems\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB6C2011-ADAF-4452-BCB0-644288C17AB8}|HospitalManagementSystems\\HospitalManagementSystems.csproj|solutionrelative:HospitalManagementSystems\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BB6C2011-ADAF-4452-BCB0-644288C17AB8}|HospitalManagementSystems\\HospitalManagementSystems.csproj|c:\\tmp\\summerproject\\hosptialmanagementproject\\hospitalmanagementsystems\\hospitalmanagementsystems\\signupform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB6C2011-ADAF-4452-BCB0-644288C17AB8}|HospitalManagementSystems\\HospitalManagementSystems.csproj|solutionrelative:hospitalmanagementsystems\\signupform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB6C2011-ADAF-4452-BCB0-644288C17AB8}|HospitalManagementSystems\\HospitalManagementSystems.csproj|c:\\tmp\\summerproject\\hosptialmanagementproject\\hospitalmanagementsystems\\hospitalmanagementsystems\\hosptialmainpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB6C2011-ADAF-4452-BCB0-644288C17AB8}|HospitalManagementSystems\\HospitalManagementSystems.csproj|solutionrelative:hospitalmanagementsystems\\hosptialmainpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB6C2011-ADAF-4452-BCB0-644288C17AB8}|HospitalManagementSystems\\HospitalManagementSystems.csproj|C:\\tmp\\SummerProject\\hosptialManagementProject\\HospitalManagementSystems\\hospitalmanagementsystems\\appointmentscheduleform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BB6C2011-ADAF-4452-BCB0-644288C17AB8}|HospitalManagementSystems\\HospitalManagementSystems.csproj|solutionrelative:hospitalmanagementsystems\\appointmentscheduleform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{BB6C2011-ADAF-4452-BCB0-644288C17AB8}|HospitalManagementSystems\\HospitalManagementSystems.csproj|C:\\tmp\\SummerProject\\hosptialManagementProject\\HospitalManagementSystems\\hospitalmanagementsystems\\signupform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BB6C2011-ADAF-4452-BCB0-644288C17AB8}|HospitalManagementSystems\\HospitalManagementSystems.csproj|solutionrelative:hospitalmanagementsystems\\signupform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BB6C2011-ADAF-4452-BCB0-644288C17AB8}|HospitalManagementSystems\\HospitalManagementSystems.csproj|C:\\tmp\\SummerProject\\hosptialManagementProject\\HospitalManagementSystems\\hospitalmanagementsystems\\hospitalmanagementhomepageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -70,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -98,20 +94,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "AppointmentScheduleForm.cs",
               "DocumentMoniker": "C:\\tmp\\SummerProject\\hosptialManagementProject\\HospitalManagementSystems\\HospitalManagementSystems\\AppointmentScheduleForm.cs",
               "RelativeDocumentMoniker": "HospitalManagementSystems\\AppointmentScheduleForm.cs",
               "ToolTip": "C:\\tmp\\SummerProject\\hosptialManagementProject\\HospitalManagementSystems\\HospitalManagementSystems\\AppointmentScheduleForm.cs",
               "RelativeToolTip": "HospitalManagementSystems\\AppointmentScheduleForm.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACEAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAwwE8AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-29T18:08:07.611Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
+              "Title": "SignUpForm.cs",
+              "DocumentMoniker": "C:\\tmp\\SummerProject\\hosptialManagementProject\\HospitalManagementSystems\\HospitalManagementSystems\\SignUpForm.cs",
+              "RelativeDocumentMoniker": "HospitalManagementSystems\\SignUpForm.cs",
+              "ToolTip": "C:\\tmp\\SummerProject\\hosptialManagementProject\\HospitalManagementSystems\\HospitalManagementSystems\\SignUpForm.cs",
+              "RelativeToolTip": "HospitalManagementSystems\\SignUpForm.cs",
+              "ViewState": "AgIAAKAAAAAAAAAAAAAAANoAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-16T17:26:16.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "AppointmentScheduleForm.cs [Design]",
               "DocumentMoniker": "C:\\tmp\\SummerProject\\hosptialManagementProject\\HospitalManagementSystems\\HospitalManagementSystems\\AppointmentScheduleForm.cs",
               "RelativeDocumentMoniker": "HospitalManagementSystems\\AppointmentScheduleForm.cs",
@@ -123,39 +132,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\tmp\\SummerProject\\hosptialManagementProject\\HospitalManagementSystems\\HospitalManagementSystems\\Program.cs",
-              "RelativeDocumentMoniker": "HospitalManagementSystems\\Program.cs",
-              "ToolTip": "C:\\tmp\\SummerProject\\hosptialManagementProject\\HospitalManagementSystems\\HospitalManagementSystems\\Program.cs",
-              "RelativeToolTip": "HospitalManagementSystems\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T18:17:41.264Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SignUpForm.cs",
-              "DocumentMoniker": "C:\\tmp\\SummerProject\\hosptialManagementProject\\HospitalManagementSystems\\HospitalManagementSystems\\SignUpForm.cs",
-              "RelativeDocumentMoniker": "HospitalManagementSystems\\SignUpForm.cs",
-              "ToolTip": "C:\\tmp\\SummerProject\\hosptialManagementProject\\HospitalManagementSystems\\HospitalManagementSystems\\SignUpForm.cs",
-              "RelativeToolTip": "HospitalManagementSystems\\SignUpForm.cs",
-              "ViewState": "AgIAAH0AAAAAAAAAAAAEwJEAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T17:26:16.507Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "HosptialMainPage.cs",
               "DocumentMoniker": "C:\\tmp\\SummerProject\\hosptialManagementProject\\HospitalManagementSystems\\HospitalManagementSystems\\HosptialMainPage.cs",
               "RelativeDocumentMoniker": "HospitalManagementSystems\\HosptialMainPage.cs",
               "ToolTip": "C:\\tmp\\SummerProject\\hosptialManagementProject\\HospitalManagementSystems\\HospitalManagementSystems\\HosptialMainPage.cs",
               "RelativeToolTip": "HospitalManagementSystems\\HosptialMainPage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-27T17:13:06.887Z",
               "EditorCaption": ""
@@ -168,14 +151,14 @@
               "RelativeDocumentMoniker": "HospitalManagementSystems\\PatientHomepageForm.cs",
               "ToolTip": "C:\\tmp\\SummerProject\\hosptialManagementProject\\HospitalManagementSystems\\HospitalManagementSystems\\PatientHomepageForm.cs",
               "RelativeToolTip": "HospitalManagementSystems\\PatientHomepageForm.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAqwCoAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCsAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-21T17:35:34.442Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "HospitalManagementHomepageForm.cs [Design]",
               "DocumentMoniker": "C:\\tmp\\SummerProject\\hosptialManagementProject\\HospitalManagementSystems\\HospitalManagementSystems\\HospitalManagementHomepageForm.cs",
               "RelativeDocumentMoniker": "HospitalManagementSystems\\HospitalManagementHomepageForm.cs",
@@ -186,7 +169,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "HosptialMainPage.cs [Design]",
               "DocumentMoniker": "C:\\tmp\\SummerProject\\hosptialManagementProject\\HospitalManagementSystems\\HospitalManagementSystems\\HosptialMainPage.cs",
               "RelativeDocumentMoniker": "HospitalManagementSystems\\HosptialMainPage.cs",
@@ -198,7 +181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "LoginForm.cs [Design]",
               "DocumentMoniker": "C:\\tmp\\SummerProject\\hosptialManagementProject\\HospitalManagementSystems\\HospitalManagementSystems\\LoginForm.cs",
               "RelativeDocumentMoniker": "HospitalManagementSystems\\LoginForm.cs",
@@ -209,7 +192,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "SignUpForm.cs [Design]",
               "DocumentMoniker": "C:\\tmp\\SummerProject\\hosptialManagementProject\\HospitalManagementSystems\\HospitalManagementSystems\\SignUpForm.cs",
               "RelativeDocumentMoniker": "HospitalManagementSystems\\SignUpForm.cs",
@@ -221,7 +204,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "HospitalManagementHomepageForm.cs",
               "DocumentMoniker": "C:\\tmp\\SummerProject\\hosptialManagementProject\\HospitalManagementSystems\\HospitalManagementSystems\\HospitalManagementHomepageForm.cs",
               "RelativeDocumentMoniker": "HospitalManagementSystems\\HospitalManagementHomepageForm.cs",
@@ -233,7 +216,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "VisitForm.cs",
               "DocumentMoniker": "C:\\tmp\\SummerProject\\hosptialManagementProject\\HospitalManagementSystems\\HospitalManagementSystems\\VisitForm.cs",
               "RelativeDocumentMoniker": "HospitalManagementSystems\\VisitForm.cs",
@@ -245,7 +228,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "LoginForm.cs",
               "DocumentMoniker": "C:\\tmp\\SummerProject\\hosptialManagementProject\\HospitalManagementSystems\\HospitalManagementSystems\\LoginForm.cs",
               "RelativeDocumentMoniker": "HospitalManagementSystems\\LoginForm.cs",
@@ -257,7 +240,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "PatientHomepageForm.cs [Design]",
               "DocumentMoniker": "C:\\tmp\\SummerProject\\hosptialManagementProject\\HospitalManagementSystems\\HospitalManagementSystems\\PatientHomepageForm.cs",
               "RelativeDocumentMoniker": "HospitalManagementSystems\\PatientHomepageForm.cs",
@@ -269,7 +252,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "VisitForm.cs [Design]",
               "DocumentMoniker": "C:\\tmp\\SummerProject\\hosptialManagementProject\\HospitalManagementSystems\\HospitalManagementSystems\\VisitForm.cs",
               "RelativeDocumentMoniker": "HospitalManagementSystems\\VisitForm.cs",

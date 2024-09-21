@@ -87,7 +87,7 @@ namespace HospitalManagementSystems
                              join address in hospitalContext.AddressNames
                              on people.AddressId equals address.AddressId
                              join doctor in hospitalContext.Doctors
-                             on people.UserId equals doctor.UserId
+                             on people.LoginId equals doctor.LoginId
                              select new
                              {
                                  PatientId = $"{patient.PatientId}",
@@ -102,6 +102,7 @@ namespace HospitalManagementSystems
 
             var upcomingAppointment = new UpcomingVisit
             {
+                PatientId = patientId,
                 UpcomingVisitDate = monthCalendarUpcomingVisitDate.SelectionStart,
                 VisitType = comboBoxVisitType.SelectedValue.ToString(),
                 DoctorName = comboBoxSearchDoctor.SelectedValue.ToString(),

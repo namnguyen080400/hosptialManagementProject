@@ -189,7 +189,7 @@
             this.Controls.Add(this.dataGridViewUpcomingVisit);
             this.Controls.Add(this.label1);
             this.Name = "AppointmentScheduleForm";
-            this.Text = "s";
+            this.Text = "Schedule Appointment Form";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUpcomingVisit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPastVisit)).EndInit();
             this.ResumeLayout(false);
