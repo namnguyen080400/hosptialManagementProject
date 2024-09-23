@@ -41,6 +41,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.comboBoxVisitType = new System.Windows.Forms.ComboBox();
+            this.buttonLoadUpcomingVisit = new System.Windows.Forms.Button();
+            this.buttonLoadPastVisit = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUpcomingVisit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPastVisit)).BeginInit();
             this.SuspendLayout();
@@ -169,12 +173,60 @@
             this.comboBoxVisitType.Size = new System.Drawing.Size(162, 28);
             this.comboBoxVisitType.TabIndex = 30;
             // 
+            // buttonLoadUpcomingVisit
+            // 
+            this.buttonLoadUpcomingVisit.BackColor = System.Drawing.Color.Goldenrod;
+            this.buttonLoadUpcomingVisit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLoadUpcomingVisit.Location = new System.Drawing.Point(1013, 219);
+            this.buttonLoadUpcomingVisit.Name = "buttonLoadUpcomingVisit";
+            this.buttonLoadUpcomingVisit.Size = new System.Drawing.Size(156, 49);
+            this.buttonLoadUpcomingVisit.TabIndex = 32;
+            this.buttonLoadUpcomingVisit.Text = "Load Upcoming Visit";
+            this.buttonLoadUpcomingVisit.UseVisualStyleBackColor = false;
+            this.buttonLoadUpcomingVisit.Click += new System.EventHandler(this.buttonLoadUpcomingVisit_Click);
+            // 
+            // buttonLoadPastVisit
+            // 
+            this.buttonLoadPastVisit.BackColor = System.Drawing.Color.Coral;
+            this.buttonLoadPastVisit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLoadPastVisit.Location = new System.Drawing.Point(1013, 499);
+            this.buttonLoadPastVisit.Name = "buttonLoadPastVisit";
+            this.buttonLoadPastVisit.Size = new System.Drawing.Size(156, 49);
+            this.buttonLoadPastVisit.TabIndex = 33;
+            this.buttonLoadPastVisit.Text = "Load Past Visit";
+            this.buttonLoadPastVisit.UseVisualStyleBackColor = false;
+            this.buttonLoadPastVisit.Click += new System.EventHandler(this.buttonLoadPastVisit_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(990, 157);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(236, 24);
+            this.label7.TabIndex = 34;
+            this.label7.Text = "Click to load upcoming visit";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(990, 434);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(185, 24);
+            this.label8.TabIndex = 35;
+            this.label8.Text = "Click to load past visit";
+            // 
             // AppointmentScheduleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1079, 936);
+            this.ClientSize = new System.Drawing.Size(1257, 936);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.buttonLoadPastVisit);
+            this.Controls.Add(this.buttonLoadUpcomingVisit);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.comboBoxVisitType);
             this.Controls.Add(this.label5);
@@ -212,5 +264,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBoxVisitType;
+        private System.Windows.Forms.Button buttonLoadUpcomingVisit;
+        private System.Windows.Forms.Button buttonLoadPastVisit;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }

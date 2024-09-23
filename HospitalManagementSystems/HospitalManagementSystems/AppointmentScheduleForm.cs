@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Security.Cryptography;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,8 +23,9 @@ namespace HospitalManagementSystems
         public AppointmentScheduleForm(int patientId, int doctorId)
         {
             InitializeComponent();
-            loadUpcomingVisit();
-            loadPastVisit();
+
+            this.patientId = patientId;
+            this.doctorId = doctorId;
 
             var queriesDoctor = from people in hospitalContext.Peoples
                           where people.RoleId == 2
@@ -79,26 +84,27 @@ namespace HospitalManagementSystems
             string selectDoctor = comboBoxSearchDoctor.SelectedValue.ToString();
             DateTime appointmentDate = monthCalendarUpcomingVisitDate.SelectionStart;
 
-            var getAllInfo = from loginId in hospitalContext.Logins
-                             join people in hospitalContext.Peoples
-                             on loginId.LoginId equals people.LoginId
-                             join patient in hospitalContext.Patients
-                             on loginId.LoginId equals patient.LoginId
-                             join address in hospitalContext.AddressNames
-                             on people.AddressId equals address.AddressId
-                             join doctor in hospitalContext.Doctors
-                             on people.LoginId equals doctor.LoginId
-                             select new
-                             {
-                                 PatientId = $"{patient.PatientId}",
-                                 Username = $"{loginId.Username}",
-                                 Firstname = $"{people.FirstName}",
-                                 Lastname = $"{people.LastName}",
-                                 DateOfBirth = $"{people.DateOfBirth}",
-                                 Gender = $"{people.Gender}",
-                                 Ethnicity = $"{people.Ethnicity}"
-                             };
+            var queriesDoctorAddress = from people in hospitalContext.Peoples
+                                   join doctor in hospitalContext.Doctors
+                                   on people.LoginId equals doctor.LoginId
+                                   join address in hospitalContext.AddressNames
+                                   on people.AddressId equals address.AddressId
+                                   where doctor.DoctorId == doctorId
+                                   select new
+                                   {
+                                       Numbers = $"{address.Number}",
+                                       Street = $"{address.Street}",
+                                       City = $"{address.City}",
+                                       StateName = $"{address.StateName}",
+                                       ZipCode = $"{address.ZipCode}"
+                                   };
+            string doctorAddress = "";
 
+            foreach(var address in queriesDoctorAddress)
+            {
+                doctorAddress += address.Numbers + " " + address.Street + " " + 
+                    address.City + ", " + address.StateName + " " + address.ZipCode;
+            }
 
             var upcomingAppointment = new UpcomingVisit
             {
@@ -106,9 +112,12 @@ namespace HospitalManagementSystems
                 UpcomingVisitDate = monthCalendarUpcomingVisitDate.SelectionStart,
                 VisitType = comboBoxVisitType.SelectedValue.ToString(),
                 DoctorName = comboBoxSearchDoctor.SelectedValue.ToString(),
-
+                VisitLocation = doctorAddress
             };
-
+            dataGridViewUpcomingVisit.DataSource = upcomingAppointment.ToString().ToList();
+            hospitalContext.UpcomingVisits.InsertOnSubmit(upcomingAppointment);
+            hospitalContext.SubmitChanges();
+            MessageBox.Show("Schedule appointment success");
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
@@ -116,6 +125,16 @@ namespace HospitalManagementSystems
             HosptialMainPage hosptialMainPage = new HosptialMainPage();
             hosptialMainPage.Show();
             this.Close();
+        }
+
+        private void buttonLoadUpcomingVisit_Click(object sender, EventArgs e)
+        {
+            loadUpcomingVisit();
+        }
+
+        private void buttonLoadPastVisit_Click(object sender, EventArgs e)
+        {
+            loadPastVisit();
         }
     }
 }
