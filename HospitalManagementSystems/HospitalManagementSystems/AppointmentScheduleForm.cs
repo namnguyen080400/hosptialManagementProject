@@ -120,6 +120,16 @@ namespace HospitalManagementSystems
             MessageBox.Show("Schedule appointment success");
         }
 
+        private void buttonEndAppointment_Click(object sender, EventArgs e)
+        {
+            var pastVisit = from currentVisit in hospitalContext.PastVisits select currentVisit;
+            foreach (var visit in pastVisit)
+            {
+
+            }
+        }
+
+
         private void buttonExit_Click(object sender, EventArgs e)
         {
             HosptialMainPage hosptialMainPage = new HosptialMainPage();
@@ -136,5 +146,7 @@ namespace HospitalManagementSystems
         {
             loadPastVisit();
         }
+
+
     }
 }

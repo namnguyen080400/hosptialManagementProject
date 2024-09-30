@@ -45,6 +45,7 @@
             this.buttonLoadPastVisit = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.buttonEndAppointment = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUpcomingVisit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPastVisit)).BeginInit();
             this.SuspendLayout();
@@ -217,12 +218,25 @@
             this.label8.TabIndex = 35;
             this.label8.Text = "Click to load past visit";
             // 
+            // buttonEndAppointment
+            // 
+            this.buttonEndAppointment.BackColor = System.Drawing.Color.LightGreen;
+            this.buttonEndAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEndAppointment.Location = new System.Drawing.Point(533, 864);
+            this.buttonEndAppointment.Name = "buttonEndAppointment";
+            this.buttonEndAppointment.Size = new System.Drawing.Size(156, 49);
+            this.buttonEndAppointment.TabIndex = 36;
+            this.buttonEndAppointment.Text = "End Appointment";
+            this.buttonEndAppointment.UseVisualStyleBackColor = false;
+            this.buttonEndAppointment.Click += new System.EventHandler(this.buttonEndAppointment_Click);
+            // 
             // AppointmentScheduleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1257, 936);
+            this.Controls.Add(this.buttonEndAppointment);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.buttonLoadPastVisit);
@@ -268,5 +282,6 @@
         private System.Windows.Forms.Button buttonLoadPastVisit;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button buttonEndAppointment;
     }
 }
